@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadable Emulator</title>
+    <link rel="stylesheet" type="text/css" href="{{styleSrc}}">
+
+</head>
+
+<body>
+    <div class="header">
+        <button class="export" onclick="exportByteCode()">Export game</button>
+        <div class="volume">
+            <input type="range" id="volumneslider" name="volumeslider" min=0 max=100 value=50/>
+            <label for="volumeslider"></label>
+        </div>
+    </div>
+    <div class="simulationContainer">
+        <div>
+            <div class="canvasWrapper">
+                <canvas id="canvasEl"></canvas>
+            </div>
+            <canvas id="textCanvasEl" class="hiddenCanvas"></canvas>
+            <div id="speakersContainer"></div>
+            <div class="controlsContainer">
+                <div id="digitalInputContainer"></div>
+                <div id="analogInputContainer"></div>
+            </div>
+        </div>
+    </div>
+    <script src="{{beepScriptSrc}}"></script>
+    <script src="{{functionScriptSrc}}"></script>
+    <script src="{{mainScriptSrc}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+{
+	"name": "jsdoc",
+	"publisher": "lllllllqw",
+	"displayName": "jsdoc",
+	"description": "gen jsdoc template",
+	"version": "1.0.3",
+	"repository": {
+		"url": "https://github.com/lllllllqw/vscode-jsdoc.git",
+		"type": "git"
+	},
+	"engines": {
+		"vscode": "^1.20.0"
+	},
+	"categories": [
+		"Extension Packs"
+	],
+	"icon": "images/icon.png",
+	"activationEvents": [
+		"onCommand:extension.genJSDoc"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.genJSDoc",
+				"title": "gen jsdoc"
+			}
+		],
+		"configuration": [
+			{
+				"title": "jsdoc",
+				"properties": {
+					"jsdoc.author": {
+						"type": "string",
+						"default": "",
+						"description": "添加此选项, jsdoc 将自动插入作者"
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"vscode:publish": "vsce publish",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test",
+		"package": "vsce package"
+	},
+	"devDependencies": {
+		"typescript": "^3.1.4",
+		"vscode": "^1.1.25",
+		"@types/node": "^8.10.25",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "e830906f-e167-461e-90f2-998014d23c5f",
+		"publisherId": "45e077d0-f510-4069-bd39-f35ecdbe373a",
+		"publisherDisplayName": "lllllllqw",
+		"installedTimestamp": 1619431754641
+	}
+}

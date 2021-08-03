@@ -1,0 +1,36 @@
+{
+  "jest-test-base": {
+    "scope": "typescriptreact",
+    "prefix": "jest-test-base",
+    "body": [
+      "describe(${1:''}, () => {",
+      "  ${2}",
+      "});",
+      ""
+    ],
+    "description": "Scaffold Jest test base (`describe()`)."
+  },
+
+  "jest-test-with-array-of-cases": {
+    "scope": "typescriptreact",
+    "prefix": "jest-test-with-array-of-cases",
+    "body": [
+      "it('${1}', () => {",
+      "  interface TestCase {",
+      "    ${2:input}: ${3:any};",
+      "    ${4:expectedOutput}: ${5:any};",
+      "  };",
+      "",
+      "  const testCases: TestCase[] = [",
+      "    { ${2:input}: ${6:undefined}, ${4:expectedOutput}: ${7:undefined} },",
+      "  ];",
+      "  testCases.forEach(testCase => {",
+      "    const { ${2:input}, ${4:expectedOutput} } = testCase;",
+      "    expect(act(${2:input})).toEqual(${4:expectedOutput});",
+      "  });",
+      "});",
+      ""
+    ],
+    "description": "Scaffolds an `it()` test which works against multiple cases."
+  }
+}

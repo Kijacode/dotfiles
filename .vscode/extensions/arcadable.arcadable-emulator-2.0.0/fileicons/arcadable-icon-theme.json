@@ -1,0 +1,10 @@
+{
+	"iconDefinitions": {
+	  "_arcadable": {
+		"iconPath": "../ArcadableIconx128.png"
+	  }
+	},
+	"languageIds": {
+		"arcadable": "_arcadable"
+	},
+  }

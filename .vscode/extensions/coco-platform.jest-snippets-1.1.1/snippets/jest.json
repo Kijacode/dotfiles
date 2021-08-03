@@ -1,0 +1,481 @@
+{
+  "afterAll": {
+    "body": "afterAll(() => {\n\t$0\n});",
+    "description": "afterAll function is called once after all specs",
+    "prefix": "aa"
+  },
+  "afterEach": {
+    "body": "afterEach(() => {\n\t$0\n});",
+    "description": "afterEach function is called once after each spec",
+    "prefix": "ae"
+  },
+  "beforeAll": {
+    "body": "beforeAll(() => {\n\t$0\n});",
+    "description": "beforeAll function is called once before all specs",
+    "prefix": "ba"
+  },
+  "beforeEach": {
+    "body": "beforeEach(() => {\n\t$0\n});",
+    "description": "beforeEach function is called once before each spec",
+    "prefix": "be"
+  },
+  "describe": {
+    "body": "describe('${1:Name of the group}', () => {\n\t$0\n});",
+    "description": "creates a describe block",
+    "prefix": "desc"
+  },
+  "describe.each": {
+    "body": [
+      "describe.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\ttest(`returns \\${expected}`, () => {",
+      "\t\t\t${4:expect(double(input)).toBe(expected);}",
+      "\t\t});",
+      "\t}",
+      ");"
+    ],
+    "description": "creates a describe block with different test data sets",
+    "prefix": "desce"
+  },
+  "describe.only": {
+    "body": "describe.only('${1:Name of the group}', () => {\n\t$0\n});",
+    "description": "creates a describe block that runs only",
+    "prefix": "desco"
+  },
+  "describe.only.each": {
+    "body": [
+      "describe.only.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\ttest(`returns \\${expected}`, () => {",
+      "\t\t\t${4:expect(double(input)).toBe(expected);}",
+      "\t\t});",
+      "\t}",
+      ");"
+    ],
+    "description": "creates a describe block with different test data sets runs only",
+    "prefix": "descoe"
+  },
+  "describe.skip": {
+    "body": "describe.skip('${1:Name of the group}', () => {\n\t$0\n});",
+    "description": "creates a describe block that will be skipped",
+    "prefix": "descs"
+  },
+  "describe.skip.each": {
+    "body": [
+      "describe.skip.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\ttest(`returns \\${expected}`, () => {",
+      "\t\t\t${4:expect(double(input)).toBe(expected);}",
+      "\t\t});",
+      "\t}",
+      ");"
+    ],
+    "description": "creates a describe block with different test data sets that will be skipped",
+    "prefix": "descse"
+  },
+  "expect": {
+    "body": "expect($0)",
+    "description": "expect actual value",
+    "prefix": "exp"
+  },
+  "expect.extend": {
+    "body": [
+      "expect.extend({",
+      "\t${1:toMatchCondition}(received, expected){",
+      "\t\t$0",
+      "\t}",
+      "})"
+    ],
+    "description": "add additional matchers to Jest",
+    "prefix": "expe"
+  },
+  "expect.extend.async": {
+    "body": [
+      "expect.extend({",
+      "\tasync ${1:toMatchCondition}(received, expected){",
+      "\t\t$0",
+      "\t}",
+      "})"
+    ],
+    "description": "add additional matchers to Jest",
+    "prefix": "expea"
+  },
+  "expect.anything": {
+    "body": "expect.anything()",
+    "description": "match anything but null or undefined",
+    "prefix": "expa"
+  },
+  "expect.any": {
+    "body": "expect.anything(${1:constructor})",
+    "description": "match anything that was created with the given constructo",
+    "prefix": "expact"
+  },
+  "expect.arrayContaining": {
+    "body": "expect.arrayContaining(${0:array})",
+    "description": "matches a received array which contains all of the elements in the expected array",
+    "prefix": "expac"
+  },
+  "expect.objectContaining": {
+    "body": "expect.objectContaining(${0:object})",
+    "description": "matches any received object that recursively matches the expected properties",
+    "prefix": "expoc"
+  },
+  "expect.stringContaining": {
+    "body": "expect.stringContaining(${0:string})",
+    "description": "matches the received value if it is a string that contains the exact expected string.",
+    "prefix": "expsc"
+  },
+  "expect.stringMatching": {
+    "body": "expect.stringMatching(${0:string | regexp})",
+    "description": "matches the received value if it is a string that matches the expected string or regular expression",
+    "prefix": "expsm"
+  },
+  "expect.assertions": {
+    "body": "expect.assertions($0);",
+    "description": "expects the test to make the indicated number of assertions (useful for async)",
+    "prefix": "expas"
+  },
+  "expect.hasAssertions": {
+    "body": "expect.hasAssertions();$0",
+    "description": "expects the test to make at least one assertion (useful for async)",
+    "prefix": "expha"
+  },
+  "expect.rejects": {
+    "body": "expect($1).rejects$0",
+    "description": "expect promise rejects to",
+    "prefix": "exprj"
+  },
+  "expect.resolves": {
+    "body": "expect($1).resolves$0",
+    "description": "expect promise resolves to",
+    "prefix": "expr"
+  },
+  "it": {
+    "body": "it('${1:should }', () => {\n\t$0\n});",
+    "description": "creates an it block",
+    "prefix": "it"
+  },
+  "it.each": {
+    "body": [
+      "it.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\t${0:expect(double(input)).toBe(expected);}",
+      "\t}",
+      ");"
+    ],
+    "description": "creates an it block with different test data sets",
+    "prefix": "ite"
+  },
+  "it.only": {
+    "body": "it.only('${1:should }', () => {\n\t$0\n});",
+    "description": "creates an it block that runs only",
+    "prefix": "ito"
+  },
+  "it.only.each": {
+    "body": [
+      "it.only.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\t${0:expect(double(input)).toBe(expected);}",
+      "\t}",
+      ");"
+    ],
+    "description": "creates an it block with different test data sets runs only",
+    "prefix": "itoe"
+  },
+  "it.skip": {
+    "body": "it.skip('${1:should }', () => {\n\t$0\n});",
+    "description": "creates an it block that will be skipped",
+    "prefix": "its"
+  },
+  "it.skip.each": {
+    "body": [
+      "it.skip.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\t${0:expect(double(input)).toBe(expected);}",
+      "\t}",
+      ");"
+    ],
+    "description": "creates an it block with different test data sets that will be skipped",
+    "prefix": "itse"
+  },
+  "it.todo": {
+    "body": "it.todo('${1:should }');",
+    "description": "creates a test placeholder",
+    "prefix": "itt"
+  },
+  "it:async": {
+    "body": "it('${1:should }', async () => {\n\t$0\n});",
+    "description": "creates an it block with async callback function",
+    "prefix": "ita"
+  },
+  "test": {
+    "body": "test('${1:should }', () => {\n\t$0\n});",
+    "description": "creates a test block",
+    "prefix": "test"
+  },
+  "test.each": {
+    "body": [
+      "test.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\t${0:expect(double(input)).toBe(expected);}",
+      "\t}",
+      ");"
+    ],
+    "description": "creates an test block with different test data sets",
+    "prefix": "teste"
+  },
+  "test.each (table)": {
+    "body": [
+      "test.each`",
+      "\t${1:input}\t| ${2:expected}",
+      "\t\\${1}\t| \\${2}",
+      "\t\\${2}\t| \\${4}",
+      "`('${3:double($${1:input})}', ({ ${1:input}, ${2:expected} }) => {",
+      "\t${0:expect(double(${1:input})).toBe(${2:expected});}",
+      "});"
+    ],
+    "description": "creates a test block using a permutation table",
+    "prefix": "testet"
+  },
+  "test.only": {
+    "body": "test.only('${1:should }', () => {\n\t$0\n});",
+    "description": "creates a test block  that runs only",
+    "prefix": "testo"
+  },
+  "test.skip": {
+    "body": "test.skip('${1:should }', () => {\n\t$0\n});",
+    "description": "creates a test block that will be skipped",
+    "prefix": "tests"
+  },
+  "test.only.each": {
+    "body": [
+      "test.only.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\t${0:expect(double(input)).toBe(expected);}",
+      "\t}",
+      ");"
+    ],
+    "description": "creates an test block with different test data sets that runs only",
+    "prefix": "testoe"
+  },
+  "test.skip.each": {
+    "body": [
+      "test.skip.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\t${0:expect(double(input)).toBe(expected);}",
+      "\t}",
+      ");"
+    ],
+    "description": "creates an test block with different test data sets that will be skipped",
+    "prefix": "testse"
+  },
+  "test.todo": {
+    "body": "test.todo('${1:should }');",
+    "description": "creates a test placeholder",
+    "prefix": "testt"
+  },
+  "test:async": {
+    "body": "test('${1:should }', async () => {\n\t$0\n});",
+    "description": "creates an test block with async callback function",
+    "prefix": "testa"
+  },
+  "toBe": {
+    "body": "expect($1).toBe($0);",
+    "description": "expects the first argument to be equal with the second one",
+    "prefix": "tb"
+  },
+  "toBeCloseTo": {
+    "body": "expect($1).toBeCloseTo(${2:number}, ${3:delta});$0",
+    "description": "expects the first argument to be close to the second one base on the delta",
+    "prefix": "tbct"
+  },
+  "toBeDefined": {
+    "body": "expect($1).toBeDefined();$0",
+    "description": "expects the argument is defined",
+    "prefix": "tbd"
+  },
+  "toBeFalsy": {
+    "body": "expect($1).toBeFalsy();$0",
+    "description": "expects the argument is falsy",
+    "prefix": "tbf"
+  },
+  "toBeGreaterThan": {
+    "body": "expect($1).toBeGreaterThan($0);",
+    "description": "expects the argument is greater than",
+    "prefix": "tbgt"
+  },
+  "toBeGreaterThanOrEqual": {
+    "body": "expect($1).toBeGreaterThanOrEqual($0);",
+    "description": "expects the argument is greater than or equal",
+    "prefix": "tbgte"
+  },
+  "toBeInstanceOf": {
+    "body": "expect($1).toBeInstanceOf($0);",
+    "description": "expects the object is instance of a class",
+    "prefix": "tbi"
+  },
+  "toBeLessThan": {
+    "body": "expect($1).toBeLessThan($0);",
+    "description": "expects the argument is less than",
+    "prefix": "tblt"
+  },
+  "toBeLessThanOrEqual": {
+    "body": "expect($1).toBeLessThanOrEqual($0);",
+    "description": "expects the argument is less than or equal",
+    "prefix": "tblte"
+  },
+  "toBeNull": {
+    "body": "expect($1).toBeNull();$0",
+    "description": "expects the argument is null",
+    "prefix": "tbn"
+  },
+  "toBeTruthy": {
+    "body": "expect($1).toBeTruthy();$0",
+    "description": "expects the argument is truthy",
+    "prefix": "tbt"
+  },
+  "toBeUndefined": {
+    "body": "expect($1).toBeUndefined();$0",
+    "description": "expects the argument is undefined",
+    "prefix": "tbu"
+  },
+  "toBeNaN": {
+    "body": "expect($1).toBeNaN();$0",
+    "description": "expects the argument is NaN",
+    "prefix": "tbnan"
+  },
+  "toContain": {
+    "body": "expect(${1:list}).toContain($0);",
+    "description": "expects the list contains the item (===)",
+    "prefix": "tc"
+  },
+  "toContainEqual": {
+    "body": "expect(${1:list}).toContainEqual($0);",
+    "description": "expects the list contains the item (equals)",
+    "prefix": "tce"
+  },
+  "toEqual": {
+    "body": "expect($1).toEqual($0);",
+    "description": "expects the first argument to be equal with the second one",
+    "prefix": "te"
+  },
+  "toHaveBeenCalled": {
+    "body": "expect($1).toHaveBeenCalled();$0",
+    "description": "returns true if the spy was called",
+    "prefix": "thbc"
+  },
+  "toHaveBeenCalledTimes": {
+    "body": "expect($1).toHaveBeenCalledTimes($0);",
+    "description": "returns true if the spy has been called given times",
+    "prefix": "thbct"
+  },
+  "toHaveBeenCalledWith": {
+    "body": "expect($1).toHaveBeenCalledWith($0);",
+    "description": "returns true if the spy has been called with",
+    "prefix": "thbcw"
+  },
+  "toHaveBeenLastCalledWith": {
+    "body": "expect($1).toHaveBeenLastCalledWith($0);",
+    "description": "returns true if the spy has been last called with",
+    "prefix": "thblcw"
+  },
+  "toHaveBeenNthCalledWith": {
+    "body": "expect($1).toHaveBeenNthCalledWith($2, $0);",
+    "description": "returns true if the spy has been nth called with",
+    "prefix": "thbncw"
+  },
+  "toHaveReturned": {
+    "body": "expect($1).toHaveReturned();",
+    "description": "return true if the spy has successfully returned",
+    "prefix": "thr"
+  },
+  "toHaveReturnedTimes": {
+    "body": "expect($1).toHaveReturnedTimes($2);",
+    "description": "return true if the spy has successfully returned exact number of times",
+    "prefix": "thrt"
+  },
+  "toHaveReturnedWith": {
+    "body": "expect($1).toHaveReturnedWith($2);",
+    "description": "return true if the spy has successfully returned specific value",
+    "prefix": "thrw"
+  },
+  "toHaveLastReturnedWith": {
+    "body": "expect($1).toHaveLastReturnedWith($2);",
+    "description": "return true if the spy last successfully returned value",
+    "prefix": "thrrw"
+  },
+  "toHaveNthReturnedWith": {
+    "body": "expect($1).toHaveNthReturnedWith($2, $0);",
+    "description": "return true if the spy nth successfully returned value",
+    "prefix": "thnrw"
+  },
+  "toHaveLength": {
+    "body": "expect($1).toHaveLength($0);",
+    "description": "expects the object to have length",
+    "prefix": "thl"
+  },
+  "toHaveProperty": {
+    "body": "expect($1).toHaveProperty(${2:keyPath}, ${3:value});$0",
+    "description": "expects the object to have specific field",
+    "prefix": "thp"
+  },
+  "toMatch": {
+    "body": "expect($1).toMatch($0);",
+    "description": "returns true if the argument matches the second value",
+    "prefix": "tm"
+  },
+  "toMatchInlineSnapshot": {
+    "body": "expect($1).toMatchInlineSnapshot($0);",
+    "description": "returns true if the argument matches the most recent inline snapshot",
+    "prefix": "tmis"
+  },
+  "toMatchObject": {
+    "body": "expect($1).toMatchObject($0);",
+    "description": "returns true if the argument matches the second object",
+    "prefix": "tmo"
+  },
+  "toMatchSnapshot": {
+    "body": "expect($1).toMatchSnapshot($0);",
+    "description": "returns true if the argument matches the most recent snapshot",
+    "prefix": "tms"
+  },
+  "toStrictEqual": {
+    "body": "expect($1).toStrictEqual($0);",
+    "description": "expects the first argument to be strictly equal with the second one",
+    "prefix": "tse"
+  },
+  "toThrow": {
+    "body": "expect(() => {\n\t$0\n}).toThrow($1);",
+    "description": "expects that the method will throw an error",
+    "prefix": "tt"
+  },
+  "toThrowError": {
+    "body": "expect(() => {\n\t$0\n}).toThrowError($1);",
+    "description": "expects that the method will throw an error",
+    "prefix": "tte"
+  },
+  "toThrowErrorMatchingInlineSnapshot": {
+    "body": "expect(() => {\n\t$0\n}).toThrowErrorMatchingInlineSnapshot();",
+    "description": "expects that the method will throw an error matching the inline snapshot",
+    "prefix": "ttemis"
+  },
+  "toThrowErrorMatchingSnapshot": {
+    "body": "expect(() => {\n\t$0\n}).toThrowErrorMatchingSnapshot();",
+    "description": "expects that the method will throw an error mathing the snapshpot",
+    "prefix": "ttems"
+  },
+  "jest.fn": {
+    "body": "jest.fn($0)",
+    "description": "creates jest.fn()",
+    "prefix": "jfn"
+  }
+}

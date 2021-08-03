@@ -1,0 +1,93 @@
+{
+	"name": "arcadable-emulator",
+	"description": "Arcadable Emulator",
+	"publisher": "Arcadable",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Arcadable/ArcadableVSCodeExtension.git"
+	},
+	"license": "MIT",
+	"version": "2.0.0",
+	"icon": "ArcadableIconx128.png",
+	"categories": [],
+	"engines": {
+		"vscode": "^1.42.0"
+	},
+	"activationEvents": [
+		"onLanguage:arcadable",
+		"onCommand:arcadable-emulator.start"
+	],
+	"main": "./client/out/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Arcadable configuration",
+			"properties": {
+				"ArcadableServer.trace.server": {
+					"scope": "window",
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VS Code and the language server."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "arcadable-emulator.start",
+				"title": "Start a new Arcadable emulator",
+				"category": "Arcadable Emulator"
+			}
+		],
+		"languages": [
+			{
+				"id": "arcadable",
+				"extensions": [
+					".arc"
+				],
+				"aliases": [
+					"arc",
+					"Arcadable"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "arcadable",
+				"scopeName": "source.arcadable",
+				"path": "./syntaxes/arc.tmGrammar.json"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run update-shared && npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+		"update-shared": "cd ./shared && npm run publish && cd ../server && rm -rf node_modules/arcadable-shared && npm install && cd ../client && rm -rf node_modules/arcadable-shared && npm install && cd ../",
+		"raindance": "rm -rf node_modules && rm -f package-lock.json && cd shared && rm -rf out && rm -rf node_modules && rm -f package-lock.json && cd ../server && rm -rf node_modules && rm -f package-lock.json && rm -rf out && cd ../client && rm -rf node_modules && rm -f package-lock.json && rm -rf out && cd ../ && npm install && cd shared && npm install && npm run publish && cd ../server && npm install && cd ../client && npm install && cd ../",
+		"package": "PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && npx vsce package && unzip -o \"./arcadable-emulator-${PACKAGE_VERSION}.vsix\" -d \"./arcadable-unzipped\" && cp -r \"./client/node_modules/arcadable-shared\" \"./arcadable-unzipped/extension/client/node_modules/\" && cp -r \"./client/node_modules/rxjs\" \"./arcadable-unzipped/extension/client/node_modules/\" && cp -r \"./server/node_modules/arcadable-shared\" \"./arcadable-unzipped/extension/server/node_modules/\" && cd \"./arcadable-unzipped\" && sudo zip -r \"../arcadable-emulator-${PACKAGE_VERSION}.vsix\" * && cd ../ && rm -rf ./arcadable-unzipped",
+		"publish": "npm run package && PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && npx vsce publish --packagePath \"arcadable-emulator-${PACKAGE_VERSION}.vsix\""
+	},
+	"devDependencies": {
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.12.0",
+		"@types/vscode": "^1.42.0",
+		"@typescript-eslint/parser": "^2.3.0",
+		"eslint": "^6.4.0",
+		"mocha": "^6.2.2",
+		"typescript": "^4.1.2",
+		"vsce": "^1.88.0"
+	},
+	"__metadata": {
+		"id": "6c2e2e4a-882e-49ec-b38d-32948d1779fa",
+		"publisherId": "bd163fa0-34d6-4485-bc8d-e31549a86f59",
+		"publisherDisplayName": "Arcadable",
+		"installedTimestamp": 1622082547647
+	}
+}

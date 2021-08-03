@@ -1,0 +1,120 @@
+{
+	"name": "scrcpy",
+	"displayName": "scrcpy",
+	"description": "Mirror, control, and record android device with scrcpy.",
+	"version": "0.0.8",
+	"publisher": "ihsanis",
+	"license": "SEE THE LICENSE FILE",
+	"repository": "https://github.com/maestralsol/vscode-scrcpy",
+	"icon": "icon.png",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:scrcpy.mirror",
+		"onCommand:scrcpy.mirrorBitRate",
+		"onCommand:scrcpy.mirrorFrameRate",
+		"onCommand:scrcpy.mirrorSize",
+		"onCommand:scrcpy.mirrorCrop",
+		"onCommand:scrcpy.mirrorCustom",
+		"onCommand:scrcpy.record",
+		"onCommand:scrcpy.recordBitRate",
+		"onCommand:scrcpy.recordFrameRate",
+		"onCommand:scrcpy.recordPath",
+		"onCommand:scrcpy.recordSize",
+		"onCommand:scrcpy.recordCrop",
+		"onCommand:scrcpy.recordCustom"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "scrcpy.mirror",
+				"title": "mirror",
+				"category": "scrcpy"
+			},
+			{
+				"command": "scrcpy.mirrorBitRate",
+				"title": "mirror (specify bit rate)",
+				"category": "scrcpy"
+			},
+			{
+				"command": "scrcpy.mirrorFrameRate",
+				"title": "mirror (specify frame rate)",
+				"category": "scrcpy"
+			},
+			{
+				"command": "scrcpy.mirrorSize",
+				"title": "mirror (specify size)",
+				"category": "scrcpy"
+			},
+			{
+				"command": "scrcpy.mirrorCrop",
+				"title": "mirror (specify crop)",
+				"category": "scrcpy"
+			},
+			{
+				"command": "scrcpy.mirrorCustom",
+				"title": "mirror (specify everything)",
+				"category": "scrcpy"
+			},
+			{
+				"command": "scrcpy.record",
+				"title": "record",
+				"category": "scrcpy"
+			},
+			{
+				"command": "scrcpy.recordBitRate",
+				"title": "record (specify bit rate)",
+				"category": "scrcpy"
+			},
+			{
+				"command": "scrcpy.recordFrameRate",
+				"title": "record (specify frame rate)",
+				"category": "scrcpy"
+			},
+			{
+				"command": "scrcpy.recordPath",
+				"title": "record (specify path)",
+				"category": "scrcpy"
+			},
+			{
+				"command": "scrcpy.recordSize",
+				"title": "record (specify size)",
+				"category": "scrcpy"
+			},
+			{
+				"command": "scrcpy.recordCrop",
+				"title": "record (specify crop)",
+				"category": "scrcpy"
+			},
+			{
+				"command": "scrcpy.recordCustom",
+				"title": "record (specify everything)",
+				"category": "scrcpy"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@types/vscode": "^1.34.0",
+		"@typescript-eslint/eslint-plugin": "^3.0.2",
+		"@typescript-eslint/parser": "^3.0.2",
+		"eslint": "^7.1.0",
+		"typescript": "^3.9.4"
+	},
+	"__metadata": {
+		"id": "445f3044-1b56-4d72-a0f4-937b2c1ce611",
+		"publisherId": "c7cd9434-2a16-499d-a387-70eae264aa2b",
+		"publisherDisplayName": "ihsanis"
+	}
+}

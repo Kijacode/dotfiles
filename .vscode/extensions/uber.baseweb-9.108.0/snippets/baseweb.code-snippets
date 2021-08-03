@@ -1,0 +1,1356 @@
+{
+ "React import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "React import"
+  ],
+  "description": "React import statement.",
+  "body": [
+   "import * as React from 'react';"
+  ]
+ },
+ "React component": {
+  "scope": "javascript,javascriptreact",
+  "prefix": [
+   "React component"
+  ],
+  "description": "React import.",
+  "body": [
+   "const ${1} = (${2}) => {",
+   "  return ${0};",
+   "};",
+   "",
+   "export default ${1};"
+  ]
+ },
+ "React typescript component": {
+  "scope": "typescript,typescriptreact",
+  "prefix": [
+   "React component"
+  ],
+  "description": "React import.",
+  "body": [
+   "const ${1}: React.FC<{${2}}> = (${3}) => {",
+   "  return ${0};",
+   "};",
+   "",
+   "export default ${1};"
+  ]
+ },
+ "Accordion import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Accordion import"
+  ],
+  "description": "Base Accordion import.",
+  "body": [
+   "import ${1:{${2:Accordion, }${3:Panel}\\}} from 'baseui/accordion';"
+  ]
+ },
+ "Accordion": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Accordion component"
+  ],
+  "description": "Base Accordion component.",
+  "body": [
+   "<Accordion",
+   "  ${1:onChange={${2:({ expanded \\}) => console.log(expanded)}\\}}",
+   "  ${3:disabled}",
+   ">",
+   "  ${4:<Panel title=\"Panel 1\">Content 1</Panel>\n  <Panel title=\"Panel 2\">Content 2</Panel>\n  <Panel title=\"Panel 3\">Content 3</Panel>}",
+   "</Accordion>"
+  ]
+ },
+ "AppNavBar import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "AppNavBar import"
+  ],
+  "description": "Base AppNavBar import.",
+  "body": [
+   "import ${1:{${2:AppNavBar, }${3:setItemActive}\\}} from 'baseui/app-nav-bar';",
+   "import ${4:{${5:ChevronDown, }${6:Delete, }${7:Overflow, }${8:Upload}\\}} from 'baseui/icon';"
+  ]
+ },
+ "AppNavBar": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "AppNavBar component"
+  ],
+  "description": "Base AppNavBar component.",
+  "body": [
+   "<AppNavBar",
+   "  ${1:title={${2:\"Title\"}\\}}",
+   "  ${3:onMainItemSelect={${4:item => {\n    setMainItems(prev => setItemActive(prev, item));\n  \\}}\\}}",
+   "  ${5:username=\"${6:Umka Marshmallow}\"}",
+   "  ${7:usernameSubtitle={${8:\"5 Stars\"}\\}}",
+   "  ${9:userImgUrl=\"${10:}\"}",
+   "  ${11:onUserItemSelect={${12:item => console.log(item)}\\}}",
+   "/>"
+  ]
+ },
+ "Avatar import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Avatar import"
+  ],
+  "description": "Base Avatar import.",
+  "body": [
+   "import ${1:{${2:Avatar}\\}} from 'baseui/avatar';"
+  ]
+ },
+ "Avatar": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Avatar component"
+  ],
+  "description": "Base Avatar component.",
+  "body": [
+   "<Avatar",
+   "  ${1:name=\"${2:Jane Doe}\"}",
+   "  ${3:size=\"${4:scale1200}\"}",
+   "  ${5:src=\"${6:https://api.adorable.io/avatars/285/10@adorable.io.png}\"}",
+   "/>"
+  ]
+ },
+ "Breadcrumbs import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Breadcrumbs import"
+  ],
+  "description": "Base Breadcrumbs import.",
+  "body": [
+   "import ${1:{${2:Breadcrumbs}\\}} from 'baseui/breadcrumbs';",
+   "import ${3:{${4:StyledLink}\\}} from 'baseui/link';"
+  ]
+ },
+ "Breadcrumbs": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Breadcrumbs component"
+  ],
+  "description": "Base Breadcrumbs component.",
+  "body": [
+   "<Breadcrumbs",
+   "  ${1:ariaLabel={${2:undefined}\\}}",
+   "  ${3:showTrailingSeparator}",
+   ">",
+   "  ${4:<StyledLink href=\"#parent\">Parent Page</StyledLink>\n  <StyledLink href=\"#sub\">Sub-Parent Page</StyledLink>\n  <span>Current Page</span>}",
+   "</Breadcrumbs>"
+  ]
+ },
+ "ButtonGroup import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "ButtonGroup import"
+  ],
+  "description": "Base ButtonGroup import.",
+  "body": [
+   "import ${1:{${2:ButtonGroup, }${3:SIZE, }${4:SHAPE, }${5:MODE}\\}} from 'baseui/button-group';",
+   "import ${6:{${7:Button}\\}} from 'baseui/button';"
+  ]
+ },
+ "ButtonGroup": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "ButtonGroup component"
+  ],
+  "description": "Base ButtonGroup component.",
+  "body": [
+   "<ButtonGroup",
+   "  ${1:size={${2|SIZE.default,SIZE.mini,SIZE.compact,SIZE.large|}\\}}",
+   "  ${3:shape={${4|SHAPE.default,SHAPE.pill,SHAPE.round,SHAPE.circle,SHAPE.square|}\\}}",
+   "  ${5:disabled}",
+   ">",
+   "  ${6:<Button>One</Button>\n  <Button>Two</Button>\n  <Button>Three</Button>}",
+   "</ButtonGroup>"
+  ]
+ },
+ "Button import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Button import"
+  ],
+  "description": "Base Button import.",
+  "body": [
+   "import ${1:{${2:Button, }${3:KIND, }${4:SIZE, }${5:SHAPE}\\}} from 'baseui/button';"
+  ]
+ },
+ "Button": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Button component"
+  ],
+  "description": "Base Button component.",
+  "body": [
+   "<Button",
+   "  ${1:onClick={${2:() => alert(\"click\")}\\}}",
+   "  ${3:startEnhancer={${4:undefined}\\}}",
+   "  ${5:endEnhancer={${6:undefined}\\}}",
+   "  ${7:disabled}",
+   "  ${8:kind={${9|KIND.primary,KIND.secondary,KIND.tertiary,KIND.minimal|}\\}}",
+   "  ${10:size={${11|SIZE.default,SIZE.mini,SIZE.compact,SIZE.large|}\\}}",
+   "  ${12:shape={${13|SHAPE.default,SHAPE.pill,SHAPE.round,SHAPE.circle,SHAPE.square|}\\}}",
+   "  ${14:isLoading}",
+   "  ${15:isSelected}",
+   ">",
+   "  ${16:Hello}",
+   "</Button>"
+  ]
+ },
+ "Card import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Card import"
+  ],
+  "description": "Base Card import.",
+  "body": [
+   "import ${1:{${2:Card, }${3:StyledBody, }${4:StyledAction}\\}} from 'baseui/card';",
+   "import ${5:{${6:Button}\\}} from 'baseui/button';"
+  ]
+ },
+ "Card": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Card component"
+  ],
+  "description": "Base Card component.",
+  "body": [
+   "<Card",
+   "  ${1:title={${2:undefined}\\}}",
+   "  ${3:headerImage={${4:undefined}\\}}",
+   ">",
+   "  ${5:<StyledBody>\n    Proin ut dui sed metus pharetra hend rerit vel non mi.\n    Nulla ornare faucibus ex, non facilisis nisl. Proin ut\n    dui sed metus pharetra hend rerit vel non mi. Nulla\n    ornare faucibus ex, non facilisis nisl.\n  </StyledBody>\n  <StyledAction>\n    <Button\n      overrides={{\n        BaseButton: { style: { width: \"100%\" \\} \\}\n      \\}\\}\n    >\n      Button Label\n    </Button>\n  </StyledAction>}",
+   "</Card>"
+  ]
+ },
+ "Checkbox import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Checkbox import"
+  ],
+  "description": "Base Checkbox import.",
+  "body": [
+   "import ${1:{${2:Checkbox, }${3:STYLE_TYPE, }${4:LABEL_PLACEMENT}\\}} from 'baseui/checkbox';"
+  ]
+ },
+ "Checkbox": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Checkbox component"
+  ],
+  "description": "Base Checkbox component.",
+  "body": [
+   "<Checkbox",
+   "  ${1:checked}",
+   "  ${2:disabled}",
+   "  ${3:checkmarkType={${4|STYLE_TYPE.default,STYLE_TYPE.toggle,STYLE_TYPE.toggle_round|}\\}}",
+   "  ${5:onChange={${6:e => setChecked(e.target.checked)}\\}}",
+   "  ${7:error}",
+   "  ${8:isIndeterminate}",
+   "  ${9:labelPlacement={${10|LABEL_PLACEMENT.top,LABEL_PLACEMENT.right,LABEL_PLACEMENT.bottom,LABEL_PLACEMENT.left|}\\}}",
+   ">",
+   "  ${11:Sign up for the newsletter}",
+   "</Checkbox>"
+  ]
+ },
+ "Combobox import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Combobox import"
+  ],
+  "description": "Base Combobox import.",
+  "body": [
+   "import ${1:{${2:Combobox}\\}} from 'baseui/combobox';",
+   "import ${3:{${4:SIZE}\\}} from 'baseui/select';"
+  ]
+ },
+ "Combobox": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Combobox component"
+  ],
+  "description": "Base Combobox component.",
+  "body": [
+   "<Combobox",
+   "  ${1:value=\"${2:}\"}",
+   "  ${3:onBlur={${4:undefined}\\}}",
+   "  ${5:onChange={${6:nextValue => setValue(nextValue)}\\}}",
+   "  ${7:onFocus={${8:undefined}\\}}",
+   "  ${9:size={${10|SIZE.default,SIZE.mini,SIZE.compact,SIZE.large|}\\}}",
+   "  ${11:options={${12:[\n    { label: \"AliceBlue\", id: \"#F0F8FF\" \\},\n    { label: \"AntiqueWhite\", id: \"#FAEBD7\" \\},\n    { label: \"Aqua\", id: \"#00FFFF\" \\},\n    { label: \"Aquamarine\", id: \"#7FFFD4\" \\},\n    { label: \"Azure\", id: \"#F0FFFF\" \\},\n    { label: \"Beige\", id: \"#F5F5DC\" \\}\n  ]}\\}}",
+   "  ${13:mapOptionToString={${14:option => option.label}\\}}",
+   "  ${15:mapOptionToNode={${16:undefined}\\}}",
+   "  ${17:autocomplete}",
+   "  ${18:disabled}",
+   "/>"
+  ]
+ },
+ "DatePicker import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Datepicker import"
+  ],
+  "description": "Base DatePicker import.",
+  "body": [
+   "import ${1:{${2:DatePicker, }${3:ORIENTATION}\\}} from 'baseui/datepicker';",
+   "import ${4:{${5:SIZE}\\}} from 'baseui/input';"
+  ]
+ },
+ "DatePicker": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Datepicker component"
+  ],
+  "description": "Base DatePicker component.",
+  "body": [
+   "<DatePicker",
+   "  ${1:value={${2:[new Date()]}\\}}",
+   "  ${3:onChange={${4:({ date \\}) =>\n    setValue(Array.isArray(date) ? date : [date])\n  }\\}}",
+   "  ${5:quickSelect}",
+   "  ${6:range}",
+   "  ${7:clearable}",
+   "  ${8:positive}",
+   "  ${9:error}",
+   "  ${10:size={${11|SIZE.default,SIZE.mini,SIZE.compact,SIZE.large|}\\}}",
+   "  ${12:maxDate={${13:undefined}\\}}",
+   "  ${14:minDate={${15:undefined}\\}}",
+   "  ${16:timeSelectStart}",
+   "  ${17:timeSelectEnd}",
+   "  ${18:disabled}",
+   "/>"
+  ]
+ },
+ "List import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "DndList import"
+  ],
+  "description": "Base List import.",
+  "body": [
+   "import ${1:{${2:List, }${3:arrayMove, }${4:arrayRemove}\\}} from 'baseui/dnd-list';"
+  ]
+ },
+ "List": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "DndList component"
+  ],
+  "description": "Base List component.",
+  "body": [
+   "<List",
+   "  ${1:items={${2:[\"Item 1\", \"Item 2\", \"Item 3\"]}\\}}",
+   "  ${3:removable}",
+   "  ${4:onChange={${5:({ oldIndex, newIndex \\}) =>\n    setItems(\n      newIndex === -1\n        ? arrayRemove(items, oldIndex)\n        : arrayMove(items, oldIndex, newIndex)\n    )\n  }\\}}",
+   "  ${6:removableByMove}",
+   "/>"
+  ]
+ },
+ "Drawer import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Drawer import"
+  ],
+  "description": "Base Drawer import.",
+  "body": [
+   "import ${1:{${2:Drawer, }${3:SIZE, }${4:ANCHOR}\\}} from 'baseui/drawer';"
+  ]
+ },
+ "Drawer": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Drawer component"
+  ],
+  "description": "Base Drawer component.",
+  "body": [
+   "<Drawer",
+   "  ${1:isOpen}",
+   "  ${2:renderAll}",
+   "  ${3:onClose={${4:() => setIsOpen(false);}\\}}",
+   "  ${5:size={${6|SIZE.default,SIZE.full,SIZE.auto|}\\}}",
+   "  ${7:anchor={${8|ANCHOR.default,ANCHOR.left,ANCHOR.right,ANCHOR.top,ANCHOR.bottom|}\\}}",
+   ">",
+   "  ${9:<div>drawer content</div>}",
+   "</Drawer>"
+  ]
+ },
+ "FileUploader import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "FileUploader import"
+  ],
+  "description": "Base FileUploader import.",
+  "body": [
+   "import ${1:{${2:FileUploader}\\}} from 'baseui/file-uploader';"
+  ]
+ },
+ "FileUploader": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "FileUploader component"
+  ],
+  "description": "Base FileUploader component.",
+  "body": [
+   "<FileUploader",
+   "  ${1:accept=\"${2:}\"}",
+   "  ${3:maxSize={${4:undefined}\\}}",
+   "  ${5:minSize={${6:undefined}\\}}",
+   "  ${7:multiple}",
+   "  ${8:disableClick}",
+   "  ${9:disabled}",
+   "  ${10:errorMessage=\"${11:}\"}",
+   "/>"
+  ]
+ },
+ "FormControl import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "FormControl import"
+  ],
+  "description": "Base FormControl import.",
+  "body": [
+   "import ${1:{${2:FormControl}\\}} from 'baseui/form-control';",
+   "import ${3:{${4:Input}\\}} from 'baseui/input';"
+  ]
+ },
+ "FormControl": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "FormControl component"
+  ],
+  "description": "Base FormControl component.",
+  "body": [
+   "<FormControl",
+   "  ${1:label={${2:() => \"label\"}\\}}",
+   "  ${3:caption={${4:() => \"caption\"}\\}}",
+   "  ${5:positive={${6:undefined}\\}}",
+   "  ${7:error={${8:undefined}\\}}",
+   "  ${9:disabled}",
+   "  ${10:htmlFor={${11:undefined}\\}}",
+   ">",
+   "  ${12:<Input />}",
+   "</FormControl>"
+  ]
+ },
+ "HeaderNavigation import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "HeaderNavigation import"
+  ],
+  "description": "Base HeaderNavigation import.",
+  "body": [
+   "import ${1:{${2:HeaderNavigation, }${3:ALIGN, }${4:StyledNavigationList, }${5:StyledNavigationItem}\\}} from 'baseui/header-navigation';",
+   "import ${6:{${7:StyledLink}\\}} from 'baseui/link';",
+   "import ${8:{${9:Button}\\}} from 'baseui/button';"
+  ]
+ },
+ "HeaderNavigation": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "HeaderNavigation component"
+  ],
+  "description": "Base HeaderNavigation component.",
+  "body": [
+   "<HeaderNavigation",
+   ">",
+   "  ${1:<StyledNavigationList \\$align={ALIGN.left\\}>\n    <StyledNavigationItem>Uber</StyledNavigationItem>\n  </StyledNavigationList>\n  <StyledNavigationList \\$align={ALIGN.center\\} />\n  <StyledNavigationList \\$align={ALIGN.right\\}>\n    <StyledNavigationItem>\n      <StyledLink href=\"#basic-link1\">\n        Tab Link One\n      </StyledLink>\n    </StyledNavigationItem>\n    <StyledNavigationItem>\n      <StyledLink href=\"#basic-link2\">\n        Tab Link Two\n      </StyledLink>\n    </StyledNavigationItem>\n  </StyledNavigationList>\n  <StyledNavigationList \\$align={ALIGN.right\\}>\n    <StyledNavigationItem>\n      <Button>Get started</Button>\n    </StyledNavigationItem>\n  </StyledNavigationList>}",
+   "</HeaderNavigation>"
+  ]
+ },
+ "ArrowUp import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Icon import"
+  ],
+  "description": "Base ArrowUp import.",
+  "body": [
+   "import ${1:{${2:ArrowUp}\\}} from 'baseui/icon';"
+  ]
+ },
+ "ArrowUp": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Icon component"
+  ],
+  "description": "Base ArrowUp component.",
+  "body": [
+   "<ArrowUp",
+   "  ${1:size={${2:64}\\}}",
+   "  ${3:color={${4:undefined}\\}}",
+   "  ${5:title={${6:undefined}\\}}",
+   "/>"
+  ]
+ },
+ "Input import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Input import"
+  ],
+  "description": "Base Input import.",
+  "body": [
+   "import ${1:{${2:Input, }${3:SIZE, }${4:ADJOINED}\\}} from 'baseui/input';"
+  ]
+ },
+ "Input": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Input component"
+  ],
+  "description": "Base Input component.",
+  "body": [
+   "<Input",
+   "  ${1:value=\"${2:Hello}\"}",
+   "  ${3:onChange={${4:e => setValue(e.target.value)}\\}}",
+   "  ${5:disabled}",
+   "  ${6:error}",
+   "  ${7:positive}",
+   "  ${8:size={${9|SIZE.default,SIZE.mini,SIZE.compact,SIZE.large|}\\}}",
+   "  ${10:placeholder=\"${11:Controlled Input}\"}",
+   "  ${12:type={${13:undefined}\\}}",
+   "  ${14:clearable}",
+   "  ${15:clearOnEscape}",
+   "  ${16:startEnhancer={${17:undefined}\\}}",
+   "  ${18:endEnhancer={${19:undefined}\\}}",
+   "/>"
+  ]
+ },
+ "StyledLink import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Link import"
+  ],
+  "description": "Base StyledLink import.",
+  "body": [
+   "import ${1:{${2:StyledLink}\\}} from 'baseui/link';"
+  ]
+ },
+ "StyledLink": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Link component"
+  ],
+  "description": "Base StyledLink component.",
+  "body": [
+   "<StyledLink",
+   "  ${1:href=\"${2:https://baseweb.design}\"}",
+   "  ${3:animateUnderline}",
+   ">",
+   "  ${4:Link to Base Web}",
+   "</StyledLink>"
+  ]
+ },
+ "ListItem import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "ListItem import"
+  ],
+  "description": "Base ListItem import.",
+  "body": [
+   "import ${1:{${2:ListItem, }${3:ListItemLabel, }${4:ARTWORK_SIZES}\\}} from 'baseui/list';",
+   "import ${5:{${6:Check}\\}} from 'baseui/icon';"
+  ]
+ },
+ "ListItem": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "ListItem component"
+  ],
+  "description": "Base ListItem component.",
+  "body": [
+   "<ListItem",
+   "  ${1:artwork={${2:props => <Check {...props\\} />}\\}}",
+   "  ${3:artworkSize={${4|ARTWORK_SIZES.SMALL,ARTWORK_SIZES.MEDIUM,ARTWORK_SIZES.LARGE|}\\}}",
+   "  ${5:endEnhancer={${6:() => <ListItemLabel>End Enhancer</ListItemLabel>}\\}}",
+   "  ${7:sublist}",
+   ">",
+   "  ${8:<ListItemLabel>Label</ListItemLabel>}",
+   "</ListItem>"
+  ]
+ },
+ "StatefulMenu import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Menu import"
+  ],
+  "description": "Base StatefulMenu import.",
+  "body": [
+   "import ${1:{${2:StatefulMenu}\\}} from 'baseui/menu';"
+  ]
+ },
+ "StatefulMenu": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Menu component"
+  ],
+  "description": "Base StatefulMenu component.",
+  "body": [
+   "<StatefulMenu",
+   "  ${1:items={${2:[\n    { label: \"Item One\" \\},\n    { label: \"Item Two\" \\},\n    { label: \"Item Three\" \\},\n    { label: \"Item Four\" \\}\n  ]}\\}}",
+   "  ${3:onItemSelect={${4:undefined}\\}}",
+   "  ${5:renderAll}",
+   "/>"
+  ]
+ },
+ "Modal import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Modal import"
+  ],
+  "description": "Base Modal import.",
+  "body": [
+   "import ${1:{${2:Modal, }${3:ModalHeader, }${4:ModalBody, }${5:ModalFooter, }${6:ModalButton, }${7:SIZE, }${8:ROLE}\\}} from 'baseui/modal';",
+   "import ${9:{${10:KIND as ButtonKind}\\}} from 'baseui/button';"
+  ]
+ },
+ "Modal": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Modal component"
+  ],
+  "description": "Base Modal component.",
+  "body": [
+   "<Modal",
+   "  ${1:onClose={${2:() => setIsOpen(false);}\\}}",
+   "  ${3:closeable}",
+   "  ${4:isOpen}",
+   "  ${5:size={${6|SIZE.default,SIZE.full,SIZE.auto|}\\}}",
+   "  ${7:role={${8|ROLE.dialog,ROLE.alertdialog|}\\}}",
+   ">",
+   "  ${9:<ModalHeader>Hello world</ModalHeader>\n  <ModalBody>\n    Proin ut dui sed metus pharetra hend rerit vel non mi.\n    Nulla ornare faucibus ex, non facilisis nisl. Maecenas\n    aliquet mauris ut tempus.\n  </ModalBody>\n  <ModalFooter>\n    <ModalButton kind={ButtonKind.tertiary\\}>\n      Cancel\n    </ModalButton>\n    <ModalButton>Okay</ModalButton>\n  </ModalFooter>}",
+   "</Modal>"
+  ]
+ },
+ "Notification import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Notification import"
+  ],
+  "description": "Base Notification import.",
+  "body": [
+   "import ${1:{${2:Notification, }${3:KIND}\\}} from 'baseui/notification';"
+  ]
+ },
+ "Notification": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Notification component"
+  ],
+  "description": "Base Notification component.",
+  "body": [
+   "<Notification",
+   "  ${1:kind={${2|KIND.info,KIND.positive,KIND.warning,KIND.negative|}\\}}",
+   "  ${3:closeable}",
+   "  ${4:onClose={${5:undefined}\\}}",
+   "  ${6:autoHideDuration={${7:undefined}\\}}",
+   ">",
+   "  ${8:{() => \"This is a notification.\"\\}}",
+   "</Notification>"
+  ]
+ },
+ "Pagination import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Pagination import"
+  ],
+  "description": "Base Pagination import.",
+  "body": [
+   "import ${1:{${2:Pagination, }${3:SIZE}\\}} from 'baseui/pagination';"
+  ]
+ },
+ "Pagination": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Pagination component"
+  ],
+  "description": "Base Pagination component.",
+  "body": [
+   "<Pagination",
+   "  ${1:numPages={${2:20}\\}}",
+   "  ${3:size={${4|SIZE.default,SIZE.mini,SIZE.compact,SIZE.large|}\\}}",
+   "  ${5:currentPage={${6:1}\\}}",
+   "  ${7:onPageChange={${8:({ nextPage \\}) => {\n    setCurrentPage(Math.min(Math.max(nextPage, 1), 20));\n  \\}}\\}}",
+   "/>"
+  ]
+ },
+ "PaymentCard import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "PaymentCard import"
+  ],
+  "description": "Base PaymentCard import.",
+  "body": [
+   "import ${1:{${2:PaymentCard}\\}} from 'baseui/payment-card';",
+   "import ${3:{${4:SIZE, }${5:ADJOINED}\\}} from 'baseui/input';"
+  ]
+ },
+ "PaymentCard": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "PaymentCard component"
+  ],
+  "description": "Base PaymentCard component.",
+  "body": [
+   "<PaymentCard",
+   "  ${1:value=\"${2:}\"}",
+   "  ${3:onChange={${4:e => setValue(e.target.value)}\\}}",
+   "  ${5:disabled}",
+   "  ${6:error}",
+   "  ${7:positive}",
+   "  ${8:size={${9|SIZE.default,SIZE.mini,SIZE.compact,SIZE.large|}\\}}",
+   "  ${10:clearable}",
+   "  ${11:clearOnEscape}",
+   "  ${12:placeholder=\"${13:Please enter your credit card number...}\"}",
+   "/>"
+  ]
+ },
+ "PhoneInput import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "PhoneInput import"
+  ],
+  "description": "Base PhoneInput import.",
+  "body": [
+   "import ${1:{${2:PhoneInput, }${3:COUNTRIES, }${4:SIZE}\\}} from 'baseui/phone-input';"
+  ]
+ },
+ "PhoneInput": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "PhoneInput component"
+  ],
+  "description": "Base PhoneInput component.",
+  "body": [
+   "<PhoneInput",
+   "  ${1:country={${2|COUNTRIES.Afghanistan (‫افغانستان‬‎),COUNTRIES.Albania (Shqipëri),COUNTRIES.Algeria (‫الجزائر‬‎),COUNTRIES.American Samoa,COUNTRIES.Andorra,COUNTRIES.Angola,COUNTRIES.Anguilla,COUNTRIES.Antigua and Barbuda,COUNTRIES.Argentina,COUNTRIES.Armenia (Հայաստան),COUNTRIES.Aruba,COUNTRIES.Australia,COUNTRIES.Austria (Österreich),COUNTRIES.Azerbaijan (Azərbaycan),COUNTRIES.Bahamas,COUNTRIES.Bahrain (‫البحرين‬‎),COUNTRIES.Bangladesh (বাংলাদেশ),COUNTRIES.Barbados,COUNTRIES.Belarus (Беларусь),COUNTRIES.Belgium (België),COUNTRIES.Belize,COUNTRIES.Benin (Bénin),COUNTRIES.Bermuda,COUNTRIES.Bhutan (འབྲུག),COUNTRIES.Bolivia,COUNTRIES.Bosnia and Herzegovina (Босна и Херцеговина),COUNTRIES.Botswana,COUNTRIES.Brazil (Brasil),COUNTRIES.British Indian Ocean Territory,COUNTRIES.British Virgin Islands,COUNTRIES.Brunei,COUNTRIES.Bulgaria (България),COUNTRIES.Burkina Faso,COUNTRIES.Burundi (Uburundi),COUNTRIES.Cambodia (កម្ពុជា),COUNTRIES.Cameroon (Cameroun),COUNTRIES.Canada,COUNTRIES.Cape Verde (Kabu Verdi),COUNTRIES.Cayman Islands,COUNTRIES.Central African Republic (République centrafricaine),COUNTRIES.Chad (Tchad),COUNTRIES.Chile,COUNTRIES.China (中国),COUNTRIES.Christmas Island,COUNTRIES.Cocos (Keeling) Islands,COUNTRIES.Colombia,COUNTRIES.Comoros (‫جزر القمر‬‎),COUNTRIES.Congo (DRC) (Jamhuri ya Kisoemokrasia ya Kongo),COUNTRIES['Congo (Republic) (Congo-Brazzaville)'],COUNTRIES.Cook Islands,COUNTRIES.Costa Rica,COUNTRIES.Côte d’Ivoire,COUNTRIES.Croatia (Hrvatska),COUNTRIES.Cuba,COUNTRIES.Curaçao,COUNTRIES.Cyprus (Κύπρος),COUNTRIES.Czech Republic (Česká republika),COUNTRIES.Denmark (Danmark),COUNTRIES.Djibouti,COUNTRIES.Dominica,COUNTRIES.Dominican Republic (República Dominicana),COUNTRIES.Ecuador,COUNTRIES.Egypt (‫مصر‬‎),COUNTRIES.El Salvador,COUNTRIES.Equatorial Guinea (Guinea Ecuatorial),COUNTRIES.Eritrea,COUNTRIES.Estonia (Eesti),COUNTRIES.Ethiopia,COUNTRIES.Falkland Islands (Islas Malvinas),COUNTRIES.Faroe Islands (Føroyar),COUNTRIES.Fiji,COUNTRIES.Finland (Suomi),COUNTRIES.France,COUNTRIES.French Guiana (Guyane française),COUNTRIES.French Polynesia (Polynésie française),COUNTRIES.Gabon,COUNTRIES.Gambia,COUNTRIES.Georgia (საქართველო),COUNTRIES.Germany (Deutschland),COUNTRIES.Ghana (Gaana),COUNTRIES.Gibraltar,COUNTRIES.Greece (Ελλάδα),COUNTRIES.Greenland (Kalaallit Nunaat),COUNTRIES.Grenada,COUNTRIES.Guadeloupe,COUNTRIES.Guam,COUNTRIES.Guatemala,COUNTRIES.Guernsey,COUNTRIES.Guinea (Guinée),COUNTRIES['Guinea-Bissau (Guiné Bissau)'],COUNTRIES.Guyana,COUNTRIES.Haiti,COUNTRIES.Honduras,COUNTRIES.Hong Kong (香港),COUNTRIES.Hungary (Magyarország),COUNTRIES.Iceland (Ísland),COUNTRIES.India (भारत),COUNTRIES.Indonesia,COUNTRIES.Iran (‫ایران‬‎),COUNTRIES.Iraq (‫العراق‬‎),COUNTRIES.Ireland,COUNTRIES.Isle of Man,COUNTRIES.Israel (‫ישראל‬‎),COUNTRIES.Italy (Italia),COUNTRIES.Jamaica,COUNTRIES.Japan (日本),COUNTRIES.Jersey,COUNTRIES.Jordan (‫الأردن‬‎),COUNTRIES.Kazakhstan (Казахстан),COUNTRIES.Kenya,COUNTRIES.Kiribati,COUNTRIES.Kosovo,COUNTRIES.Kuwait (‫الكويت‬‎),COUNTRIES.Kyrgyzstan (Кыргызстан),COUNTRIES.Laos (ລາວ),COUNTRIES.Latvia (Latvija),COUNTRIES.Lebanon (‫لبنان‬‎),COUNTRIES.Lesotho,COUNTRIES.Liberia,COUNTRIES.Libya (‫ليبيا‬‎),COUNTRIES.Liechtenstein,COUNTRIES.Lithuania (Lietuva),COUNTRIES.Luxembourg,COUNTRIES.Macau (澳門),COUNTRIES.North Macedonia (FYROM) (Македонија),COUNTRIES.Madagascar (Madagasikara),COUNTRIES.Malawi,COUNTRIES.Malaysia,COUNTRIES.Maldives,COUNTRIES.Mali,COUNTRIES.Malta,COUNTRIES.Marshall Islands,COUNTRIES.Martinique,COUNTRIES.Mauritania (‫موريتانيا‬‎),COUNTRIES.Mauritius (Moris),COUNTRIES.Mayotte,COUNTRIES.Mexico (México),COUNTRIES.Micronesia,COUNTRIES.Moldova (Republica Moldova),COUNTRIES.Monaco,COUNTRIES.Mongolia (Монгол),COUNTRIES.Montenegro (Crna Gora),COUNTRIES.Montserrat,COUNTRIES.Morocco (‫المغرب‬‎),COUNTRIES.Mozambique (Moçambique),COUNTRIES.Myanmar (Burma) (မြန်မာ),COUNTRIES.Namibia (Namibië),COUNTRIES.Nauru,COUNTRIES.Nepal (नेपाल),COUNTRIES.Netherlands (Nederland),COUNTRIES['New Caledonia (Nouvelle-Calédonie)'],COUNTRIES.New Zealand,COUNTRIES.Nicaragua,COUNTRIES.Niger (Nijar),COUNTRIES.Nigeria,COUNTRIES.Niue,COUNTRIES.Norfolk Island,COUNTRIES.North Korea (조선 민주주의 인민 공화국),COUNTRIES.Northern Mariana Islands,COUNTRIES.Norway (Norge),COUNTRIES.Oman (‫عُمان‬‎),COUNTRIES.Pakistan (‫پاکستان‬‎),COUNTRIES.Palau,COUNTRIES.Palestine (‫فلسطين‬‎),COUNTRIES.Panama (Panamá),COUNTRIES.Papua New Guinea,COUNTRIES.Paraguay,COUNTRIES.Peru (Perú),COUNTRIES.Philippines,COUNTRIES.Poland (Polska),COUNTRIES.Portugal,COUNTRIES.Puerto Rico,COUNTRIES.Qatar (‫قطر‬‎),COUNTRIES.Réunion (La Réunion),COUNTRIES.Romania (România),COUNTRIES.Russia (Россия),COUNTRIES.Rwanda,COUNTRIES.Saint Barthélemy,COUNTRIES.Saint Helena,COUNTRIES.Saint Kitts and Nevis,COUNTRIES.Saint Lucia,COUNTRIES['Saint Martin (Saint-Martin (partie française))'],COUNTRIES['Saint Pierre and Miquelon (Saint-Pierre-et-Miquelon)'],COUNTRIES.Saint Vincent and the Grenadines,COUNTRIES.Samoa,COUNTRIES.San Marino,COUNTRIES.São Tomé and Príncipe (São Tomé e Príncipe),COUNTRIES.Saudi Arabia (‫المملكة العربية السعودية‬‎),COUNTRIES.Senegal (Sénégal),COUNTRIES.Serbia (Србија),COUNTRIES.Seychelles,COUNTRIES.Sierra Leone,COUNTRIES.Singapore,COUNTRIES.Sint Maarten,COUNTRIES.Slovakia (Slovensko),COUNTRIES.Slovenia (Slovenija),COUNTRIES.Solomon Islands,COUNTRIES.Somalia (Soomaaliya),COUNTRIES.South Africa,COUNTRIES.South Korea (대한민국),COUNTRIES.South Sudan (‫جنوب السودان‬‎),COUNTRIES.Spain (España),COUNTRIES.Sri Lanka (ශ්‍රී ලංකාව),COUNTRIES.Sudan (‫السودان‬‎),COUNTRIES.Suriname,COUNTRIES.Svalbard and Jan Mayen,COUNTRIES.Swaziland,COUNTRIES.Sweden (Sverige),COUNTRIES.Switzerland (Schweiz),COUNTRIES.Syria (‫سوريا‬‎),COUNTRIES.Taiwan (台灣),COUNTRIES.Tajikistan,COUNTRIES.Tanzania,COUNTRIES.Thailand (ไทย),COUNTRIES['Timor-Leste'],COUNTRIES.Togo,COUNTRIES.Tokelau,COUNTRIES.Tonga,COUNTRIES.Trinisoad and Tobago,COUNTRIES.Tunisia (‫تونس‬‎),COUNTRIES.Turkey (Türkiye),COUNTRIES.Turkmenistan,COUNTRIES.Turks and Caicos Islands,COUNTRIES.Tuvalu,COUNTRIES.U.S. Virgin Islands,COUNTRIES.Uganda,COUNTRIES.Ukraine (Україна),COUNTRIES.United Arab Emirates (‫الإمارات العربية المتحدة‬‎),COUNTRIES.United Kingdom,COUNTRIES.United States,COUNTRIES.Uruguay,COUNTRIES.Uzbekistan (Oʻzbekiston),COUNTRIES.Vanuatu,COUNTRIES.Vatican City (Città del Vaticano),COUNTRIES.Venezuela,COUNTRIES.Vietnam (Việt Nam),COUNTRIES['Wallis and Futuna (Wallis-et-Futuna)'],COUNTRIES.Yemen (‫اليمن‬‎),COUNTRIES.Zambia,COUNTRIES.Zimbabwe,COUNTRIES.Åland Islands|}\\}}",
+   "  ${3:onCountryChange={${4:({ option \\}) => setCountry(option)}\\}}",
+   "  ${5:text=\"${6:}\"}",
+   "  ${7:onTextChange={${8:e => setText(e.currentTarget.value)}\\}}",
+   "  ${9:disabled}",
+   "  ${10:error}",
+   "  ${11:positive}",
+   "  ${12:size={${13|SIZE.mini,SIZE.default,SIZE.compact,SIZE.large|}\\}}",
+   "  ${14:placeholder=\"${15:}\"}",
+   "  ${16:clearable}",
+   "/>"
+  ]
+ },
+ "PinCode import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "PinCode import"
+  ],
+  "description": "Base PinCode import.",
+  "body": [
+   "import ${1:{${2:PinCode}\\}} from 'baseui/pin-code';",
+   "import ${3:{${4:SIZE}\\}} from 'baseui/input';"
+  ]
+ },
+ "PinCode": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "PinCode component"
+  ],
+  "description": "Base PinCode component.",
+  "body": [
+   "<PinCode",
+   "  ${1:values={${2:[\"\", \"\", \"\", \"\"]}\\}}",
+   "  ${3:onChange={${4:({ values \\}) => setValues(values)}\\}}",
+   "  ${5:disabled}",
+   "  ${6:error}",
+   "  ${7:positive}",
+   "  ${8:size={${9|SIZE.default,SIZE.mini,SIZE.compact,SIZE.large|}\\}}",
+   "  ${10:clearOnEscape}",
+   "  ${11:mask}",
+   "  ${12:placeholder={${13:undefined}\\}}",
+   "/>"
+  ]
+ },
+ "StatefulPopover import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Popover import"
+  ],
+  "description": "Base StatefulPopover import.",
+  "body": [
+   "import ${1:{${2:StatefulPopover, }${3:PLACEMENT, }${4:TRIGGER_TYPE, }${5:ACCESSIBILITY_TYPE}\\}} from 'baseui/popover';",
+   "import ${6:{${7:Input}\\}} from 'baseui/input';",
+   "import ${8:{${9:Button}\\}} from 'baseui/button';"
+  ]
+ },
+ "StatefulPopover": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Popover component"
+  ],
+  "description": "Base StatefulPopover component.",
+  "body": [
+   "<StatefulPopover",
+   "  ${1:content={${2:() => (\n    <Block padding={\"20px\"\\}>\n      Hello, there! 👋\n      <Input placeholder=\"Focusable Element\" />\n    </Block>\n  )}\\}}",
+   "  ${3:placement={${4|PLACEMENT.auto,PLACEMENT.topLeft,PLACEMENT.top,PLACEMENT.topRight,PLACEMENT.rightTop,PLACEMENT.right,PLACEMENT.rightBottom,PLACEMENT.bottomRight,PLACEMENT.bottom,PLACEMENT.bottomLeft,PLACEMENT.leftBottom,PLACEMENT.left,PLACEMENT.leftTop|}\\}}",
+   "  ${5:triggerType={${6|TRIGGER_TYPE.click,TRIGGER_TYPE.hover|}\\}}",
+   "  ${7:showArrow}",
+   "  ${8:popoverMargin={${9:8}\\}}",
+   "  ${10:focusLock}",
+   "  ${11:returnFocus}",
+   "  ${12:renderAll}",
+   ">",
+   "  ${13:<Button>Click me</Button>}",
+   "</StatefulPopover>"
+  ]
+ },
+ "ProgressBar import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "ProgressBar import"
+  ],
+  "description": "Base ProgressBar import.",
+  "body": [
+   "import ${1:{${2:ProgressBar, }${3:SIZE}\\}} from 'baseui/progress-bar';"
+  ]
+ },
+ "ProgressBar": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "ProgressBar component"
+  ],
+  "description": "Base ProgressBar component.",
+  "body": [
+   "<ProgressBar",
+   "  ${1:value={${2:10}\\}}",
+   "  ${3:getProgressLabel={${4:}\\}}",
+   "  ${5:showLabel}",
+   "  ${6:infinite}",
+   "  ${7:size={${8|SIZE.medium,SIZE.small,SIZE.large|}\\}}",
+   "  ${9:steps={${10:undefined}\\}}",
+   "  ${11:errorMessage={${12:undefined}\\}}",
+   "/>"
+  ]
+ },
+ "ProgressSteps import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "ProgressSteps import"
+  ],
+  "description": "Base ProgressSteps import.",
+  "body": [
+   "import ${1:{${2:ProgressSteps, }${3:Step}\\}} from 'baseui/progress-steps';",
+   "import ${4:{${5:Button}\\}} from 'baseui/button';"
+  ]
+ },
+ "ProgressSteps": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "ProgressSteps component"
+  ],
+  "description": "Base ProgressSteps component.",
+  "body": [
+   "<ProgressSteps",
+   "  ${1:current={${2:0}\\}}",
+   ">",
+   "  ${3:<Step title=\"Verify Address\">\n    <p>Address on file: 1455 Market Street</p>\n    <Button size=\"compact\" onClick={() => setCurrent(1)\\}>\n      Next\n    </Button>\n  </Step>\n  <Step title=\"Verify Payment\">Payment verified</Step>}",
+   "</ProgressSteps>"
+  ]
+ },
+ "RadioGroup import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Radio import"
+  ],
+  "description": "Base RadioGroup import.",
+  "body": [
+   "import ${1:{${2:RadioGroup, }${3:Radio, }${4:ALIGN}\\}} from 'baseui/radio';"
+  ]
+ },
+ "RadioGroup": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Radio component"
+  ],
+  "description": "Base RadioGroup component.",
+  "body": [
+   "<RadioGroup",
+   "  ${1:value=\"${2:2}\"}",
+   "  ${3:onChange={${4:e => setValue(e.target.value)}\\}}",
+   "  ${5:name=\"${6:number}\"}",
+   "  ${7:align={${8|ALIGN.vertical,ALIGN.horizontal|}\\}}",
+   "  ${9:disabled}",
+   "  ${10:error}",
+   ">",
+   "  ${11:<Radio value=\"1\">One</Radio>\n  <Radio\n    value=\"2\"\n    description=\"This is a radio description\"\n  >\n    Two\n  </Radio>\n  <Radio value=\"3\">Three</Radio>}",
+   "</RadioGroup>"
+  ]
+ },
+ "StarRating import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Rating import"
+  ],
+  "description": "Base StarRating import.",
+  "body": [
+   "import ${1:{${2:StarRating}\\}} from 'baseui/rating';"
+  ]
+ },
+ "StarRating": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Rating component"
+  ],
+  "description": "Base StarRating component.",
+  "body": [
+   "<StarRating",
+   "  ${1:numItems={${2:5}\\}}",
+   "  ${3:onChange={${4:data => setValue(data.value)}\\}}",
+   "  ${5:size={${6:22}\\}}",
+   "  ${7:value={${8:4}\\}}",
+   "  ${9:readOnly}",
+   "/>"
+  ]
+ },
+ "Select import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Select import"
+  ],
+  "description": "Base Select import.",
+  "body": [
+   "import ${1:{${2:Select, }${3:SIZE, }${4:TYPE}\\}} from 'baseui/select';"
+  ]
+ },
+ "Select": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Select component"
+  ],
+  "description": "Base Select component.",
+  "body": [
+   "<Select",
+   "  ${1:autoFocus}",
+   "  ${2:backspaceRemoves}",
+   "  ${3:clearable}",
+   "  ${4:closeOnSelect}",
+   "  ${5:creatable}",
+   "  ${6:deleteRemoves}",
+   "  ${7:disabled}",
+   "  ${8:error}",
+   "  ${9:positive}",
+   "  ${10:escapeClearsValue}",
+   "  ${11:size={${12|SIZE.default,SIZE.mini,SIZE.compact,SIZE.large|}\\}}",
+   "  ${13:options={${14:[\n    { label: \"AliceBlue\", id: \"#F0F8FF\" \\},\n    { label: \"AntiqueWhite\", id: \"#FAEBD7\" \\},\n    { label: \"Aqua\", id: \"#00FFFF\" \\},\n    { label: \"Aquamarine\", id: \"#7FFFD4\" \\},\n    { label: \"Azure\", id: \"#F0FFFF\" \\},\n    { label: \"Beige\", id: \"#F5F5DC\" \\}\n  ]}\\}}",
+   "  ${15:value={${16:[]}\\}}",
+   "  ${17:getOptionLabel={${18:undefined}\\}}",
+   "  ${19:getValueLabel={${20:undefined}\\}}",
+   "  ${21:labelKey={${22:undefined}\\}}",
+   "  ${23:valueKey={${24:undefined}\\}}",
+   "  ${25:filterOutSelected}",
+   "  ${26:isLoading}",
+   "  ${27:multi}",
+   "  ${28:onBlurResetsInput}",
+   "  ${29:onCloseResetsInput}",
+   "  ${30:onSelectResetsInput}",
+   "  ${31:openOnClick}",
+   "  ${32:required}",
+   "  ${33:searchable}",
+   "  ${34:startOpen}",
+   "  ${35:type={${36|TYPE.select,TYPE.search|}\\}}",
+   "  ${37:placeholder=\"${38:Select color}\"}",
+   "  ${39:onChange={${40:params => setValue(params.value)}\\}}",
+   "  ${41:filterOptions={${42:undefined}\\}}",
+   "  ${43:onInputChange={${44:undefined}\\}}",
+   "  ${45:onOpen={${46:undefined}\\}}",
+   "  ${47:onClose={${48:undefined}\\}}",
+   "/>"
+  ]
+ },
+ "Navigation import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "SideNav import"
+  ],
+  "description": "Base Navigation import.",
+  "body": [
+   "import ${1:{${2:Navigation}\\}} from 'baseui/side-navigation';"
+  ]
+ },
+ "Navigation": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "SideNav component"
+  ],
+  "description": "Base Navigation component.",
+  "body": [
+   "<Navigation",
+   "  ${1:items={${2:[\n    {\n      title: \"Colors\",\n      itemId: \"#colors\",\n      subNav: [\n        { title: \"Primary\", itemId: \"#primary\" \\},\n        {\n          title: \"Shades\",\n          itemId: \"#shades\",\n          subNav: [\n            { title: \"Dark\", itemId: \"#dark\" \\},\n            {\n              title: \"Disabled\",\n              itemId: \"#disabled\",\n              disabled: true\n            \\}\n          ]\n        \\}\n      ]\n    \\}\n  ]}\\}}",
+   "  ${3:activeItemId=\"${4:#primary}\"}",
+   "  ${5:onChange={${6:({ item \\}) => setActiveItemId(item.itemId)}\\}}",
+   "  ${7:activePredicate={${8:undefined}\\}}",
+   "  ${9:mapItem={${10:undefined}\\}}",
+   "/>"
+  ]
+ },
+ "Skeleton import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Skeleton import"
+  ],
+  "description": "Base Skeleton import.",
+  "body": [
+   "import ${1:{${2:Skeleton}\\}} from 'baseui/skeleton';"
+  ]
+ },
+ "Skeleton": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Skeleton component"
+  ],
+  "description": "Base Skeleton component.",
+  "body": [
+   "<Skeleton",
+   "  ${1:rows={${2:0}\\}}",
+   "  ${3:height=\"${4:100px}\"}",
+   "  ${5:width=\"${6:200px}\"}",
+   "  ${7:animation}",
+   "/>"
+  ]
+ },
+ "Slider import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Slider import"
+  ],
+  "description": "Base Slider import.",
+  "body": [
+   "import ${1:{${2:Slider}\\}} from 'baseui/slider';"
+  ]
+ },
+ "Slider": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Slider component"
+  ],
+  "description": "Base Slider component.",
+  "body": [
+   "<Slider",
+   "  ${1:value={${2:[10]}\\}}",
+   "  ${3:onChange={${4:({ value \\}) => value && setValue(value)}\\}}",
+   "  ${5:onFinalChange={${6:({ value \\}) => console.log(value)}\\}}",
+   "  ${7:min={${8:undefined}\\}}",
+   "  ${9:max={${10:undefined}\\}}",
+   "  ${11:step={${12:undefined}\\}}",
+   "  ${13:marks}",
+   "  ${14:disabled}",
+   "/>"
+  ]
+ },
+ "Spinner import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Spinner import"
+  ],
+  "description": "Base Spinner import.",
+  "body": [
+   "import ${1:{${2:Spinner}\\}} from 'baseui/spinner';"
+  ]
+ },
+ "Spinner": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Spinner component"
+  ],
+  "description": "Base Spinner component.",
+  "body": [
+   "<Spinner",
+   "  ${1:size={${2:undefined}\\}}",
+   "  ${3:color={${4:undefined}\\}}",
+   "/>"
+  ]
+ },
+ "Tab import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "TabMotion import"
+  ],
+  "description": "Base Tab import.",
+  "body": [
+   "import ${1:{${2:Tab}\\}} from 'baseui/tabs-motion';"
+  ]
+ },
+ "Tab": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "TabMotion component"
+  ],
+  "description": "Base Tab component.",
+  "body": [
+   "<Tab",
+   "  ${1:title={${2:undefined}\\}}",
+   "  ${3:tabRef={${4:undefined}\\}}",
+   "  ${5:artwork={${6:undefined}\\}}",
+   ">",
+   "  ${7:undefined}",
+   "</Tab>"
+  ]
+ },
+ "Table import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Table import"
+  ],
+  "description": "Base Table import.",
+  "body": [
+   "import ${1:{${2:Table}\\}} from 'baseui/table';"
+  ]
+ },
+ "Table": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Table component"
+  ],
+  "description": "Base Table component.",
+  "body": [
+   "<Table",
+   "  ${1:columns={${2:[\"Name\", \"Age\", \"Address\"]}\\}}",
+   "  ${3:data={${4:[\n    [\n      \"Sarah Brown\",\n      31,\n      \"100 Broadway st. New York City, New York\"\n    ],\n    [\n      \"Jane Smith\",\n      32,\n      \"100 Market st. San Francisco, California\"\n    ]\n  ]}\\}}",
+   "  ${5:horizontalScrollWidth={${6:undefined}\\}}",
+   "  ${7:isLoading}",
+   "/>"
+  ]
+ },
+ "Tabs import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Tabs import"
+  ],
+  "description": "Base Tabs import.",
+  "body": [
+   "import ${1:{${2:Tabs, }${3:Tab, }${4:ORIENTATION}\\}} from 'baseui/tabs';"
+  ]
+ },
+ "Tabs": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Tabs component"
+  ],
+  "description": "Base Tabs component.",
+  "body": [
+   "<Tabs",
+   "  ${1:onChange={${2:({ activeKey \\}) => {\n    setActiveKey(activeKey);\n  \\}}\\}}",
+   "  ${3:orientation={${4|ORIENTATION.horizontal,ORIENTATION.vertical|}\\}}",
+   "  ${5:activeKey=\"${6:0}\"}",
+   "  ${7:disabled}",
+   "  ${8:renderAll}",
+   ">",
+   "  ${9:<Tab title=\"Tab Link 1\">Content 1</Tab>\n  <Tab title=\"Tab Link 2\">Content 2</Tab>\n  <Tab title=\"Tab Link 3\">Content 3</Tab>}",
+   "</Tabs>"
+  ]
+ },
+ "Tag import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Tag import"
+  ],
+  "description": "Base Tag import.",
+  "body": [
+   "import ${1:{${2:Tag, }${3:KIND, }${4:VARIANT, }${5:SIZE}\\}} from 'baseui/tag';"
+  ]
+ },
+ "Tag": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Tag component"
+  ],
+  "description": "Base Tag component.",
+  "body": [
+   "<Tag",
+   "  ${1:onClick={${2:undefined}\\}}",
+   "  ${3:onActionClick={${4:undefined}\\}}",
+   "  ${5:closeable}",
+   "  ${6:kind={${7|KIND.primary,KIND.custom,KIND.neutral,KIND.accent,KIND.positive,KIND.warning,KIND.negative,KIND.black,KIND.blue,KIND.green,KIND.red,KIND.yellow,KIND.orange,KIND.purple,KIND.brown|}\\}}",
+   "  ${8:color={${9:undefined}\\}}",
+   "  ${10:variant={${11|VARIANT.light,VARIANT.solid,VARIANT.outlined|}\\}}",
+   "  ${12:size={${13|SIZE.small,SIZE.medium,SIZE.large|}\\}}",
+   "  ${14:disabled}",
+   ">",
+   "  ${15:this is a tag}",
+   "</Tag>"
+  ]
+ },
+ "Textarea import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Textarea import"
+  ],
+  "description": "Base Textarea import.",
+  "body": [
+   "import ${1:{${2:Textarea}\\}} from 'baseui/textarea';",
+   "import ${3:{${4:SIZE}\\}} from 'baseui/input';"
+  ]
+ },
+ "Textarea": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Textarea component"
+  ],
+  "description": "Base Textarea component.",
+  "body": [
+   "<Textarea",
+   "  ${1:value=\"${2:Hello}\"}",
+   "  ${3:onChange={${4:e => setValue(e.target.value)}\\}}",
+   "  ${5:disabled}",
+   "  ${6:error}",
+   "  ${7:positive}",
+   "  ${8:size={${9|SIZE.default,SIZE.mini,SIZE.compact,SIZE.large|}\\}}",
+   "  ${10:placeholder=\"${11:Controlled Input}\"}",
+   "  ${12:clearable}",
+   "  ${13:clearOnEscape}",
+   "/>"
+  ]
+ },
+ "TimePicker import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Timepicker import"
+  ],
+  "description": "Base TimePicker import.",
+  "body": [
+   "import ${1:{${2:TimePicker}\\}} from 'baseui/timepicker';",
+   "import ${3:{${4:SIZE}\\}} from 'baseui/input';"
+  ]
+ },
+ "TimePicker": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Timepicker component"
+  ],
+  "description": "Base TimePicker component.",
+  "body": [
+   "<TimePicker",
+   "  ${1:value={${2:2021-01-22T19:46:58.847Z}\\}}",
+   "  ${3:onChange={${4:date => setValue(date)}\\}}",
+   "  ${5:size={${6|SIZE.default,SIZE.mini,SIZE.compact,SIZE.large|}\\}}",
+   "  ${7:creatable}",
+   "  ${8:nullable}",
+   "  ${9:placeholder={${10:undefined}\\}}",
+   "  ${11:disabled}",
+   "  ${12:format={${13:undefined}\\}}",
+   "  ${14:step={${15:undefined}\\}}",
+   "  ${16:error}",
+   "  ${17:positive}",
+   "/>"
+  ]
+ },
+ "TimezonePicker import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Timezonepicker import"
+  ],
+  "description": "Base TimezonePicker import.",
+  "body": [
+   "import ${1:{${2:TimezonePicker}\\}} from 'baseui/timezonepicker';",
+   "import ${3:{${4:SIZE}\\}} from 'baseui/input';"
+  ]
+ },
+ "TimezonePicker": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Timezonepicker component"
+  ],
+  "description": "Base TimezonePicker component.",
+  "body": [
+   "<TimezonePicker",
+   "  ${1:value=\"${2:Europe / London}\"}",
+   "  ${3:onChange={${4:({ id \\}) => setValue(id)}\\}}",
+   "  ${5:positive}",
+   "  ${6:error}",
+   "  ${7:size={${8|SIZE.default,SIZE.mini,SIZE.compact,SIZE.large|}\\}}",
+   "  ${9:date={${10:2021-01-22T19:47:30.669Z}\\}}",
+   "  ${11:mapLabels={${12:undefined}\\}}",
+   "  ${13:disabled}",
+   "/>"
+  ]
+ },
+ "ToasterContainer import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Toast import"
+  ],
+  "description": "Base ToasterContainer import.",
+  "body": [
+   "import ${1:{${2:toaster, }${3:ToasterContainer, }${4:PLACEMENT}\\}} from 'baseui/toast';",
+   "import ${5:{${6:Button, }${7:SIZE}\\}} from 'baseui/button';",
+   "import ${8:{${9:Block}\\}} from 'baseui/block';"
+  ]
+ },
+ "ToasterContainer": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Toast component"
+  ],
+  "description": "Base ToasterContainer component.",
+  "body": [
+   "<ToasterContainer",
+   "  ${1:placement={${2|PLACEMENT.top,PLACEMENT.topLeft,PLACEMENT.topRight,PLACEMENT.bottomRight,PLACEMENT.bottom,PLACEMENT.bottomLeft|}\\}}",
+   "  ${3:autoHideDuration={${4:0}\\}}",
+   ">",
+   "  ${5:<Button\n    onClick={() => {\n      let toastKey;\n      const msg =\n        \"Use toaster.info(), toaster.positive(), toaster.warning(), or toaster.negative()\";\n      const ok = (\n        <Block\n          marginTop=\"15px\"\n          display=\"flex\"\n          justifyContent=\"center\"\n        >\n          <Button\n            size={SIZE.compact\\}\n            onClick={() => toaster.clear(toastKey)\\}\n          >\n            Ok\n          </Button>\n        </Block>\n      );\n      const showMore = (\n        <Block\n          marginTop=\"15px\"\n          display=\"flex\"\n          justifyContent=\"left\"\n        >\n          <Button\n            size={SIZE.compact\\}\n            onClick={() =>\n              toaster.update(toastKey, {\n                children: (\n                  <>\n                    {msg\\} to show different notification\n                    type. {ok\\}\n                  </>\n                )\n              \\})\n            \\}\n          >\n            Show more\n          </Button>\n        </Block>\n      );\n      toastKey = toaster.info(\n        <>\n          {msg\\}\n          {showMore\\}\n        </>,\n        {\n          onClose: () => console.log(\"Toast closed.\"),\n          overrides: {\n            InnerContainer: { style: { width: \"100%\" \\} \\}\n          \\}\n        \\}\n      );\n    \\}\\}\n  >\n    Show notification\n  </Button>}",
+   "</ToasterContainer>"
+  ]
+ },
+ "StatefulTooltip import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Tooltip import"
+  ],
+  "description": "Base StatefulTooltip import.",
+  "body": [
+   "import ${1:{${2:StatefulTooltip, }${3:PLACEMENT, }${4:TRIGGER_TYPE, }${5:ACCESSIBILITY_TYPE}\\}} from 'baseui/tooltip';",
+   "import ${6:{${7:Input}\\}} from 'baseui/input';"
+  ]
+ },
+ "StatefulTooltip": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "Tooltip component"
+  ],
+  "description": "Base StatefulTooltip component.",
+  "body": [
+   "<StatefulTooltip",
+   "  ${1:content={${2:() => (\n    <Block padding={\"20px\"\\}>\n      Hello, there! 👋\n      <Input placeholder=\"Focusable Element\" />\n    </Block>\n  )}\\}}",
+   "  ${3:placement={${4|PLACEMENT.auto,PLACEMENT.topLeft,PLACEMENT.top,PLACEMENT.topRight,PLACEMENT.rightTop,PLACEMENT.right,PLACEMENT.rightBottom,PLACEMENT.bottomRight,PLACEMENT.bottom,PLACEMENT.bottomLeft,PLACEMENT.leftBottom,PLACEMENT.left,PLACEMENT.leftTop|}\\}}",
+   "  ${5:triggerType={${6|TRIGGER_TYPE.hover,TRIGGER_TYPE.click|}\\}}",
+   "  ${7:showArrow}",
+   "  ${8:popoverMargin={${9:8}\\}}",
+   "  ${10:focusLock}",
+   "  ${11:returnFocus}",
+   "  ${12:renderAll}",
+   ">",
+   "  ${13:Hover me}",
+   "</StatefulTooltip>"
+  ]
+ },
+ "TreeView import": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "TreeView import"
+  ],
+  "description": "Base TreeView import.",
+  "body": [
+   "import ${1:{${2:TreeView, }${3:toggleIsExpanded}\\}} from 'baseui/tree-view';"
+  ]
+ },
+ "TreeView": {
+  "scope": "javascript,javascriptreact,typescript,typescriptreact",
+  "prefix": [
+   "TreeView component"
+  ],
+  "description": "Base TreeView component.",
+  "body": [
+   "<TreeView",
+   "  ${1:getId={${2:undefined}\\}}",
+   "  ${3:indentGuides}",
+   "  ${4:onToggle={${5:node => {\n    setData(prevData => toggleIsExpanded(prevData, node));\n  \\}}\\}}",
+   "  ${6:renderAll}",
+   "/>"
+  ]
+ }
+}

@@ -1,0 +1,79 @@
+{
+	"name": "auto-view-readme",
+	"displayName": "Auto View Readme",
+	"publisher": "ChaDonSom",
+	"description": "Use a keyboard shortcut to automatically view whatever readme.md file is in the directory of the current open file",
+	"version": "0.0.6",
+	"icon": "images/icon-640.png",
+	"repository": {
+		"url": "https://github.com/ChaDonSom/auto-view-readme"
+	},
+	"engines": {
+		"vscode": "^1.50.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:auto-view-readme.view",
+		"onCommand:auto-view-readme.open",
+		"onCommand:auto-view-readme.openWithPreview"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "auto-view-readme.view",
+				"title": "Auto-View-Readme: View"
+			},
+			{
+				"command": "auto-view-readme.open",
+				"title": "Auto-View-Readme: Open"
+			},
+			{
+				"command": "auto-view-readme.openWithPreview",
+				"title": "Auto-View-Readme: Open with preview"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "auto-view-readme.view",
+				"key": "ctrl+shift+r ctrl+shift+d"
+			},
+			{
+				"command": "auto-view-readme.open",
+				"key": "ctrl+shift+r ctrl+shift+o"
+			},
+			{
+				"command": "auto-view-readme.openWithPreview",
+				"key": "ctrl+shift+r ctrl+shift+p"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.50.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.9.0",
+		"@typescript-eslint/eslint-plugin": "^4.1.1",
+		"@typescript-eslint/parser": "^4.1.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vscode-test": "^1.4.0"
+	},
+	"__metadata": {
+		"id": "b7a2a268-e947-41e3-85bc-ff1f59c5692d",
+		"publisherId": "e02b5924-217e-4473-bff0-d3484807ef47",
+		"publisherDisplayName": "ChaDonSom"
+	}
+}

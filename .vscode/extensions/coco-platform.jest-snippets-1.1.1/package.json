@@ -1,0 +1,63 @@
+{
+	"name": "jest-snippets",
+	"displayName": "Jest Snippets",
+	"description": "Code snippets for testing framework Jest",
+	"version": "1.1.1",
+	"publisher": "coco-platform",
+	"license": "MIT",
+	"scripts": {
+		"publish": "vsce publish"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/coco-platform/vscode-jest-snippets"
+	},
+	"engines": {
+		"vscode": "^1.11.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"devDependencies": {
+		"husky": "^4.2.5",
+		"prettier": "1.19.1",
+		"pretty-quick": "^2.0.1",
+		"vsce": "^1.76.1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "pretty-quick --staged"
+		}
+	},
+	"icon": "images/jest_snippets_icon.png",
+	"galleryBanner": {
+		"color": "#99424f",
+		"theme": "light"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/jest.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/jest.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/jest.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/jest.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "8c7c64a9-dde1-4437-8ab8-fd586c6185c9",
+		"publisherId": "24794248-2104-4eae-b568-b36d021aacfa",
+		"publisherDisplayName": "coco-platform",
+		"installedTimestamp": 1619154638166
+	}
+}

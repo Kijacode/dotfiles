@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ release ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v1.4.2
+
+    - name: Install vsce
+      run: npm install -g vsce
+    
+    - name: Install dependencies
+      run: npm install
+
+    - name: Publish extension
+      run: vsce publish -p ${{secrets.PERSONAL_ACCESS_TOKEN}}

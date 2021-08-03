@@ -1,0 +1,13 @@
+node_modules
+#dist
+bower_components
+
+*.sublime-project
+*.sublime-workspace
+
+.DS_Store
+.idea
+coverage
+
+test/tmp_*
+test/fixtures/samples/*.actual.*

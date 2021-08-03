@@ -1,0 +1,62 @@
+{
+	"name": "angulargenerator",
+	"displayName": "angulargenerator",
+	"description": "Angular CLI generate-command helper",
+	"version": "0.0.1",
+	"publisher": "TalatAltan",
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.generateAngular",
+		"onCommand:extension.newAngular"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.generateAngular",
+				"title": "Generate Angular..."
+			},
+			{
+				"command": "extension.newAngular",
+				"title": "New Angular App"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "extension.newAngular"
+				}
+			],
+			"explorer/context": [
+				{
+					"when": "resourceScheme == file",
+					"command": "extension.generateAngular",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "0fc613d6-4b39-40be-a9f4-6931e1d2d0be",
+		"publisherId": "4acb0f92-f1e8-432f-a44e-f2d3a4e133e8",
+		"publisherDisplayName": "Talat Altan"
+	}
+}

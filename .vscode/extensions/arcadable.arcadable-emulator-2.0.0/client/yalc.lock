@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "arcadable-shared": {
+      "signature": "f1c8a903a6ad41f419b5476973ab74aa",
+      "file": true
+    }
+  }
+}

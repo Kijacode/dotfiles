@@ -1,0 +1,305 @@
+{
+	"scopeName": "source.arcadable",
+	"patterns": [
+		{
+			"include": "#expression"
+		}
+	],
+	"repository": {
+		"expression": {
+			"patterns": [
+				{
+					"include": "#comment"
+				},
+				{
+					"include": "#type"
+				},
+				{
+					"include": "#generic"
+				},
+				{
+					"include": "#import"
+				},
+				{
+					"include": "#eval"
+				},
+				{
+					"include": "#number"
+				},
+				{
+					"include": "#eval2"
+				},
+				{
+					"include": "#variable"
+				},
+				{
+					"include": "#tone"
+				},
+				{
+					"include": "#execute"
+				},
+				{
+					"include": "#wait"
+				},
+				{
+					"include": "#debug"
+				},
+				{
+					"include": "#draw"
+				},
+				{
+					"include": "#clear"
+				},
+				{
+					"include": "#condition1"
+				},
+				{
+					"include": "#condition2"
+				},
+				{
+					"include": "#condition3"
+				},
+				{
+					"include": "#randomVariable"
+				},
+				{
+					"include": "#randomNumber"
+				},
+				{
+					"include": "#randomString1"
+				},
+				{
+					"include": "#randomString2"
+				}
+			]
+		},
+		"comment": {
+			"match": "(//(.*))",
+			"captures": {
+				"1": {
+					"name": "comment.line.double-slash"
+				}
+			}
+		},
+		"type": {
+			"match": "(([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*):(( )*?(Number|Analog|Digital|Speaker|Image|Pixel|Config|String|Eval|AsyncFunction|Function|ListValue|List))",
+			"captures": {
+				"1": {
+					"name": "variable"
+				},
+				"4": {
+					"name": "support.type.primitive"
+				}
+			}
+		},
+		"generic": {
+			"match": "<(( )*?(Number|Analog|Digital|Speaker|Image|Pixel|Config|String|Eval|AsyncFunction|Function|ListValue|List))>",
+			"captures": {
+				"3": {
+					"name": "support.type.primitive"
+				}
+			}
+		},
+		"import": {
+			"match": "(import)( *)(\"([^\"]*)\")",
+			"captures": {
+				"1": {
+					"name": "keyword.control"
+				},
+				"3": {
+					"name": "string"
+				}
+			}
+		},
+		"number": {
+			"match": "( *)=( *)(([0-9]+(\\.([0-9]+))?)|(\\.([0-9]+)))",
+			"captures": {
+				"3": {
+					"name": "constant.numeric"
+				}
+			}
+		},
+		"variable": {
+			"match": "( *)=( *)(([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*)",
+			"captures": {
+				"3": {
+					"name": "variable"
+				}
+			}
+		},
+		"eval": {
+			"match": "(([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*)( *)=( *)(static)?( *)((([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*)|(([0-9]+(\\.([0-9]+))?)|(\\.([0-9]+))))( *)(\\+|-|\\*|\/|%|&|\\||\\^|<<|>>|pow|==|!=|>|<|>=|<=)( *)((([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*)|(([0-9]+(\\.([0-9]+))?)|(\\.([0-9]+))))",
+			"captures": {
+				"1": {
+					"name": "variable"
+				},
+				"6": {
+					"name": "storage.type"
+				},
+				"8": {
+					"name": "variable"
+				},
+				"12": {
+					"name": "constant.numeric"
+				},
+				"21": {
+					"name": "variable"
+				},
+				"25": {
+					"name": "constant.numeric"
+				}
+			}
+		},
+		"eval2": {
+			"match": "( *)=( *)(static)?( *)((([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*)|(([0-9]+(\\.([0-9]+))?)|(\\.([0-9]+))))( *)(\\+|-|\\*|\/|%|&|\\||\\^|<<|>>|pow|==|!=|>|<|>=|<=)( *)((([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*)|(([0-9]+(\\.([0-9]+))?)|(\\.([0-9]+))))",
+			"captures": {
+				"3": {
+					"name": "storage.type"
+				},
+				"5": {
+					"name": "variable"
+				},
+				"9": {
+					"name": "constant.numeric"
+				},
+				"18": {
+					"name": "variable"
+				},
+				"22": {
+					"name": "constant.numeric"
+				}
+			}
+		},
+		"execute": {
+			"match": "(await( +?))?(execute)(\\(( *)(([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*)( *)\\))",
+			"captures": {
+				"1": {
+					"name": "keyword.control"
+				},
+				"3": {
+					"name": "entity.name.function"
+				},
+				"6": {
+					"name": "variable"
+				}
+			}
+		},
+		"tone": {
+			"match": "(await( +?))?(tone)\\(",
+			"captures": {
+				"1": {
+					"name": "keyword.control"
+				},
+				"3": {
+					"name": "entity.name.function"
+				}
+			}
+		},
+		"wait": {
+			"match": "(wait)\\(( *)((([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*)|(([0-9]+(\\.([0-9]+))?)|(\\.([0-9]+))))( *)\\)",
+			"captures": {
+				"1": {
+					"name": "keyword.control"
+				},
+				"4": {
+					"name": "variable"
+				},
+				"7": {
+					"name": "constant.numeric"
+				}
+			}
+		},
+		"debug": {
+			"match": "(log)\\(( *)((([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*)|(([0-9]+(\\.([0-9]+))?)|(\\.([0-9]+))))( *)\\)",
+			"captures": {
+				"1": {
+					"name": "entity.name.function"
+				},
+				"4": {
+					"name": "variable"
+				},
+				"7": {
+					"name": "constant.numeric"
+				}
+			}
+		},
+		"draw": {
+			"match": "(draw\\.(.*?))\\(",
+			"captures": {
+				"1": {
+					"name": "entity.name.function"
+				}
+			}
+		},
+		"clear": {
+			"match": "(draw\\.clear)",
+			"captures": {
+				"1": {
+					"name": "entity.name.function"
+				}
+			}
+		},
+		"condition1": {
+			"match": "(if)( *)\\(( *)(([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*)( *)\\)( *)",
+			"captures": {
+				"1": {
+					"name": "keyword.control"
+				},
+				"4": {
+					"name": "variable"
+				}
+			}
+		},
+		"condition2": {
+			"match": "(if)( *)\\(( *)((([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*)|(([0-9]+(\\.([0-9]+))?)|(\\.([0-9]+))))( *)",
+			"captures": {
+				"1": {
+					"name": "keyword.control"
+				},
+				"4": {
+					"name": "variable"
+				}
+			}
+		},
+		"condition3": {
+			"match": "}( *)(else)( *){",
+			"captures": {
+				"2": {
+					"name": "keyword.control"
+				}
+			}
+		},
+		"randomNumber": {
+			"match": "(([0-9]+(\\.([0-9]+))?)|(\\.([0-9]+)))",
+			"captures": {
+				"1": {
+					"name": "constant.numeric"
+				}
+			}
+		},
+		"randomVariable": {
+			"match": "(([a-z]|[A-Z])+([a-z]|[A-Z]|[0-9])*)",
+			"captures": {
+				"1": {
+					"name": "variable"
+				}
+			}
+		},
+		"randomString1": {
+			"match": "(\"([^\"]*)\")",
+			"captures": {
+				"1": {
+					"name": "string"
+				}
+			}
+		},
+		"randomString2": {
+			"match": "('([^']*)')",
+			"captures": {
+				"1": {
+					"name": "string"
+				}
+			}
+		}
+	}
+}

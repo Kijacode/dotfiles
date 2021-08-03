@@ -1,0 +1,47 @@
+{
+	"name": "auto-type",
+	"displayName": "auto-type",
+	"description": "Auto-type code from a script",
+	"version": "0.1.0",
+	"publisher": "eeecomputes",
+	"repository": "https://github.com/eee-c/auto-type",
+	"engines": {
+		"vscode": "^1.27.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.playCodeScript",
+		"onCommand:extension.resetCodeScript"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.playCodeScript",
+				"title": "Play Code Script"
+			},
+			{
+				"command": "extension.resetCodeScript",
+				"title": "Restart Code Script"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.21",
+		"eslint": "^4.11.0",
+		"@types/node": "^8.10.25",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "deeae079-5e9d-4207-8f2c-32a5635839ad",
+		"publisherId": "72ec3f3a-5053-4a48-b131-7f02095615b1",
+		"publisherDisplayName": "EEE Computes"
+	}
+}

@@ -1,0 +1,20 @@
+{
+  "name": "arcadable-server",
+  "description": "Arcadable Server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "arcadable-shared": "file:../shared",
+    "ieee-float": "^0.6.0",
+    "vscode-languageserver": "6.1.1",
+    "vscode-languageserver-protocol": "3.15.3",
+    "vscode-languageserver-textdocument": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.42.0"
+  },
+  "scripts": {}
+}

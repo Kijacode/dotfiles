@@ -1,0 +1,212 @@
+{
+	"name": "vscode-angular2-files",
+	"displayName": "Angular Files",
+	"description": "Quickly scaffold angular file templates",
+	"version": "1.6.4",
+	"icon": "images/icon.png",
+	"publisher": "alexiv",
+	"author": {
+		"name": "Alexander Ivanichev"
+	},
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ivalexa/vscode-angular2-files"
+	},
+	"bugs": {
+		"url": "https://github.com/ivalexa/vscode-angular2-files/issues"
+	},
+	"keywords": [
+		"Angular 2",
+		"angular-cli",
+		"angular",
+		"TypeScript",
+		"Templates"
+	],
+	"categories": [
+		"Other",
+		"Programming Languages",
+		"Snippets"
+	],
+	"scripts": {
+		"templates": "copyfiles templates/**/*.tmpl templates/**/*.tmpl ./out/src/",
+		"vscode:prepublish": "npm run templates && tsc -p ./",
+		"compile": "npm run templates && tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Angular Files menu option configuration",
+			"properties": {
+				"angular2-files.menu.component": {
+					"type": "boolean",
+					"default": true,
+					"description": "Shows or hides the menu item."
+				},
+				"angular2-files.menu.directive": {
+					"type": "boolean",
+					"default": true,
+					"description": "Shows or hides the menu item."
+				},
+				"angular2-files.menu.pipe": {
+					"type": "boolean",
+					"default": true,
+					"description": "Shows or hides the menu item."
+				},
+				"angular2-files.menu.service": {
+					"type": "boolean",
+					"default": true,
+					"description": "Shows or hides the menu item."
+				},
+				"angular2-files.menu.class": {
+					"type": "boolean",
+					"default": true,
+					"description": "Shows or hides the menu item."
+				},
+				"angular2-files.menu.interface": {
+					"type": "boolean",
+					"default": true,
+					"description": "Shows or hides the menu item."
+				},
+				"angular2-files.menu.route": {
+					"type": "boolean",
+					"default": true,
+					"description": "Shows or hides the menu item."
+				},
+				"angular2-files.menu.enum": {
+					"type": "boolean",
+					"default": true,
+					"description": "Shows or hides the menu item."
+				},
+				"angular2-files.menu.module": {
+					"type": "boolean",
+					"default": true,
+					"description": "Shows or hides the menu item."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "extension.addAngular2Component",
+				"title": "Generate Component"
+			},
+			{
+				"command": "extension.addAngular2Directive",
+				"title": "Generate Directive"
+			},
+			{
+				"command": "extension.addAngular2Pipe",
+				"title": "Generate Pipe"
+			},
+			{
+				"command": "extension.addAngular2Service",
+				"title": "Generate Service"
+			},
+			{
+				"command": "extension.addAngular2Class",
+				"title": "Generate Class"
+			},
+			{
+				"command": "extension.addAngular2Interface",
+				"title": "Generate Interface"
+			},
+			{
+				"command": "extension.addAngular2Route",
+				"title": "Generate Route"
+			},
+			{
+				"command": "extension.addAngular2Enum",
+				"title": "Generate Enum"
+			},
+			{
+				"command": "extension.addAngular2Module",
+				"title": "Generate Module"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "config.angular2-files.menu.component",
+					"command": "extension.addAngular2Component",
+					"group": "Angular2"
+				},
+				{
+					"when": "config.angular2-files.menu.directive",
+					"command": "extension.addAngular2Directive",
+					"group": "Angular2"
+				},
+				{
+					"when": "config.angular2-files.menu.pipe",
+					"command": "extension.addAngular2Pipe",
+					"group": "Angular2"
+				},
+				{
+					"when": "config.angular2-files.menu.service",
+					"command": "extension.addAngular2Service",
+					"group": "Angular2"
+				},
+				{
+					"when": "config.angular2-files.menu.module",
+					"command": "extension.addAngular2Module",
+					"group": "Angular2"
+				},
+				{
+					"when": "config.angular2-files.menu.class",
+					"command": "extension.addAngular2Class",
+					"group": "Angular2 Essentials"
+				},
+				{
+					"when": "config.angular2-files.menu.interface",
+					"command": "extension.addAngular2Interface",
+					"group": "Angular2 Essentials"
+				},
+				{
+					"when": "config.angular2-files.menu.route",
+					"command": "extension.addAngular2Route",
+					"group": "Angular2 Essentials"
+				},
+				{
+					"when": "config.angular2-files.menu.enum",
+					"command": "extension.addAngular2Enum",
+					"group": "Angular2 Essentials"
+				}
+			]
+		}
+	},
+	"devDependencies": {
+		"@types/chai": "^4.2.12",
+		"@types/mocha": "^8.0.1",
+		"@types/node": "^14.0.27",
+		"@types/rimraf": "^3.0.0",
+		"@types/sinon": "^9.0.4",
+		"@types/sinon-chai": "^3.2.4",
+		"chai": "^4.2.0",
+		"copyfiles": "^2.3.0",
+		"mocha": "^8.1.1",
+		"rimraf": "^3.0.2",
+		"sinon": "^9.0.2",
+		"sinon-chai": "^3.5.0",
+		"tslint": "^6.1.3",
+		"tslint-config-airbnb": "^5.11.2",
+		"typescript": "^3.9.7",
+		"vscode": "^1.1.37",
+		"vscode-test-content": "^1.2.0"
+	},
+	"dependencies": {
+		"dirty-json": "^0.9.1",
+		"express-es6-template-engine": "^2.2.3"
+	},
+	"__metadata": {
+		"id": "1d4278a8-3599-45f1-a4ad-dd9723ff3904",
+		"publisherId": "e9df838a-28b5-430c-a793-e55343c297a0",
+		"publisherDisplayName": "Alexander Ivanichev"
+	}
+}

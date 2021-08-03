@@ -1,0 +1,116 @@
+{
+	"name": "emulate",
+	"displayName": "Android iOS Emulator",
+	"description": "Run Android emulator and iOS simulator easily from VScode!",
+	"version": "1.4.0",
+	"publisher": "DiemasMichiels",
+	"author": {
+		"name": "Diemas Michiels"
+	},
+	"icon": "images/ic_emulator.png",
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"categories": [
+		"Debuggers",
+		"Other"
+	],
+	"keywords": [
+		"Emulator",
+		"Android",
+		"iOS",
+		"Simulator"
+	],
+	"activationEvents": [
+		"onCommand:emulator.start"
+	],
+	"main": "./src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "emulator.start",
+				"title": "Emulator",
+				"icon": {
+					"light": "./images/EmulatorRightTopAction_16x.svg",
+					"dark": "./images/EmulatorRightTopAction_16x_dark.svg"
+				}
+			}
+		],
+		"keybindings": [
+			{
+				"key": "ctrl+alt+e",
+				"mac": "cmd+alt+e",
+				"command": "emulator.start"
+			}
+		],
+		"menus": {
+			"editor/title": [
+				{
+					"command": "emulator.start",
+					"when": "config.emulator.hasEditorTitleIcon",
+					"group": "navigation"
+				}
+			]
+		},
+		"configuration": {
+			"title": "Emulator Configuration",
+			"properties": {
+				"emulator.emulatorPath": {
+					"type": "string",
+					"default": "~/Library/Android/sdk/emulator",
+					"description": "The absolute path of the Android directory containing the emulator script."
+				},
+				"emulator.emulatorPathMac": {
+					"type": "string",
+					"default": "",
+					"description": "The absolute path of the Android directory on your Macbook containing the emulator script."
+				},
+				"emulator.emulatorPathLinux": {
+					"type": "string",
+					"default": "",
+					"description": "The absolute path of the Android directory on your Linux containing the emulator script."
+				},
+				"emulator.emulatorPathWindows": {
+					"type": "string",
+					"default": "",
+					"description": "The absolute path of the Android directory on your Windows containing the emulator script."
+				},
+				"emulator.androidColdBoot": {
+					"type": "boolean",
+					"default": false,
+					"description": "Show an option to cold boot android devices."
+				},
+				"emulator.hasEditorTitleIcon": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show the emulator icon in the editor bar on the top right."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"standard": "13.1.0",
+		"vscode": "1.1.29"
+	},
+	"dependencies": {
+		"child_process": "1.0.2"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DiemasMichiels/Emulator.git"
+	},
+	"homepage": "https://github.com/DiemasMichiels/Emulator",
+	"bugs": {
+		"url": "https://github.com/DiemasMichiels/Emulator/issues"
+	},
+	"__metadata": {
+		"id": "d14e9a1d-64ce-4c73-8e17-619bc4b8a9c1",
+		"publisherId": "27f250eb-0f53-4a3f-bb88-0d830c06139d",
+		"publisherDisplayName": "Diemas Michiels"
+	}
+}

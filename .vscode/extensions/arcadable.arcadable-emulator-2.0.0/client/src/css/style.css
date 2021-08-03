@@ -1,0 +1,98 @@
+html, body{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+
+.header {
+    width: 100%;
+    height: 40px;
+    background: #303030;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #151515;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.3);
+
+}
+.simulationContainer {
+    width: 100%;
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: overlay;
+}
+.simulationContainer >div {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.3);
+    border: 1px solid #151515;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.canvasWrapper {
+    width: 100%;
+    background: #303030;
+}
+canvas {
+    image-rendering: pixelated; 
+    width: 100%;
+    background-color: black;
+}
+.hiddenCanvas {
+    display: none;
+}
+.controlsContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: calc(100% - 20px);
+    background: #303030;
+    padding: 10px;
+}
+#digitalInputContainer, #analogInputContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#digitalInputContainer div, #analogInputContainer div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#digitalInputContainer div {
+    width: 25%;
+}
+#analogInputContainer div {
+    width: 50%;
+}
+#speakersContainer {
+    background: #303030;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+img {
+    width: 40px;
+    height: 30px;
+}
+img.off {
+    padding-right: 8px;
+    width: 32px;
+}
+img.on {
+    filter: invert(79%) sepia(28%) saturate(1043%) hue-rotate(91deg) brightness(96%) contrast(83%);
+    
+}
