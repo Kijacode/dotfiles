@@ -1,11 +1,14 @@
-# dotfiles
+# My Dotfiles
 
-link to get start
+## In New Machine Linux X
 
-https://www.freecodecamp.org/news/build-your-own-dotfiles-manager-from-scratch/
-
-
-https://dotfiles.github.io/tutorials/
+```json
+git clone https://github.com/Kijacode/dotfiles.git
 
 
-https://github.com/driesvints/dotfiles
+
+cd ~/dotfiles
+chmod +x makesymlinks.sh
+./makesymlinks.sh
+```
+
